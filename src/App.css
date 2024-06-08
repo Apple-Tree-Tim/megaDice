@@ -372,7 +372,7 @@ html {
    slider section
   ===================================*/
 .slider-area {
-  background: url(assets/images/hero/bg.png);
+  background: url(images/hero/bg.png);
   height: 949px;
   position: relative;
   z-index: 1;
@@ -512,7 +512,7 @@ html {
 
 /*slider section srtyle two*/
 .slider-area.two {
-  background: url(assets/images/hero/hero-bg2.png);
+  background: url(images/hero/hero-bg2.png);
   height: 949px;
   position: relative;
   z-index: 1;
@@ -678,7 +678,7 @@ html {
 
 /*slider- style five*/
 .slider-area.style-five {
-  background: url(assets/images/new/hero.jpg);
+  background: url(images/new/hero.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -883,7 +883,7 @@ span.other {
 
 /*hero secetion*/
 .hero-section {
-  background: url(assets/images/banner/banner4.jpg);
+  background: url(images/banner/banner4.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1677,7 +1677,7 @@ span.another {
 
 /*service section*/
 .service-section {
-  background: url(assets/images/service/circle.jpg);
+  background: url(images/service/circle.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
@@ -1781,7 +1781,7 @@ span.another {
 
 /*service section style three*/
 .service-section.style-three {
-  background: url(assets/images/new/service-bg.png);
+  background: url(images/new/service-bg.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1844,7 +1844,7 @@ span.another {
 
 /*service section four*/
 .service-section.style-four {
-  background: url(assets/images/new/service-bg.png);
+  background: url(images/new/service-bg.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1917,7 +1917,7 @@ span.another {
 
 /* start date table section*/
 .table-section {
-  background: url(assets/images/new/table-bg.jpg);
+  background: url(images/new/table-bg.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2231,7 +2231,7 @@ a.paginate_button {
 
 /*about style three*/
 .about-section.style-three {
-  background: url(assets/images/new/bg.png);
+  background: url(images/new/bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2328,7 +2328,7 @@ a.paginate_button {
 
 /*choose section*/
 .choose-section {
-  background: url(assets/images/choose/section.jpg);
+  background: url(images/choose/section.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2363,7 +2363,7 @@ a.paginate_button {
 
 /*choose section style two*/
 .choose-section.style-two {
-  background: url(assets/images/new/bg2.png);
+  background: url(images/new/bg2.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2439,7 +2439,7 @@ a.paginate_button {
 
 /*feature section*/
 .feature-section {
-  background: url(assets/images/new/ground.png);
+  background: url(images/new/ground.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2778,7 +2778,7 @@ span.count {
 
 /*token style four*/
 .token-section.style-four {
-  background: url(assets/images/new/token.png);
+  background: url(images/new/token.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3122,7 +3122,7 @@ canvas#yourChart {
 
 /*graph  section style three*/
 .graph-section.style-three {
-  background: url(assets/images/new/000.jpg);
+  background: url(images/new/000.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3192,7 +3192,7 @@ canvas#yourChart {
 .road-map {
   position: relative;
   z-index: 1;
-  background: url(assets/images/bg.jpg);
+  background: url(images/bg.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3260,7 +3260,7 @@ canvas#yourChart {
 
 /*single road map box*/
 .row.upper5 {
-  background: url(assets/images/map/bg.png);
+  background: url(images/map/bg.png);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3422,7 +3422,7 @@ canvas#yourChart {
 .road-map.style-two {
   position: relative;
   z-index: 1;
-  background: url(assets/images/map/map.png);
+  background: url(images/map/map.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3510,7 +3510,7 @@ canvas#yourChart {
 
 /*road map style three*/
 .road-map.style-two.upper {
-  background: url(assets/images/new/map.jpg);
+  background: url(images/new/map.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3570,14 +3570,14 @@ canvas#yourChart {
 
 /*call section*/
 .call-section {
-  background: url(assets/images/new/call.jpg);
+  background: url(images/new/call.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
 .call-section .row.section {
-  background: url(assets/images/new/shape.png);
+  background: url(images/new/shape.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3614,7 +3614,7 @@ canvas#yourChart {
 
 /*start document section*/
 .document-section {
-  background: url(assets/images/document/back2.png);
+  background: url(images/document/back2.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -3670,7 +3670,7 @@ h2.other {
 
 /* start team section*/
 .team-section {
-  background: url(assets/images/team/abvice.png);
+  background: url(images/team/abvice.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4058,7 +4058,7 @@ h2.other {
 
 /*team section upper*/
 .team-section.style-four.upper {
-  background: url(assets/images/new/000.jpg);
+  background: url(images/new/000.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -4179,7 +4179,7 @@ h2.other {
 
 /*faq section style five*/
 .faq-section.style-five {
-  background: url(assets/images/new/table-bg.jpg);
+  background: url(images/new/table-bg.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -4277,7 +4277,7 @@ ul.tabs li.active {
 .contact-section.style-two {
   position: relative;
   margin-top: 0;
-  background: url(assets/images/connect.jpg);
+  background: url(images/connect.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4357,7 +4357,7 @@ ul.tabs li.active {
 /*contact from*/
 .contact-section.style-four {
   margin-top: 0;
-  background: url(assets/images/new/blog.jpg);
+  background: url(images/new/blog.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -4473,7 +4473,7 @@ ul.tabs li.active {
 
 /*faq section style four*/
 .faq-section.style-four {
-  background: url(assets/images/new/call.jpg);
+  background: url(images/new/call.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -5220,7 +5220,7 @@ a.othrer3 {
 }
 
 .coin-animation .coin-1 {
-  background: url('assets/images/banner/coin1.png');
+  background: url('images/banner/coin1.png');
   height: 33px;
   width: 33px;
   background-repeat: no-repeat;
@@ -5234,7 +5234,7 @@ a.othrer3 {
 }
 
 .coin-animation .coin-2 {
-  background: url('assets/images/banner/coin2.png');
+  background: url('images/banner/coin2.png');
   height: 44px;
   width: 44px;
   background-repeat: no-repeat;
@@ -5250,7 +5250,7 @@ a.othrer3 {
 }
 
 .coin-animation .coin-3 {
-  background: url('assets/images/banner/coin3.png');
+  background: url('images/banner/coin3.png');
   height: 37px;
   width: 37px;
   background-repeat: no-repeat;
@@ -5264,7 +5264,7 @@ a.othrer3 {
 }
 
 .coin-animation .coin-4 {
-  background: url('assets/images/banner/coin4.png');
+  background: url('images/banner/coin4.png');
   height: 25px;
   width: 25px;
   background-repeat: no-repeat;
@@ -5278,7 +5278,7 @@ a.othrer3 {
 }
 
 .coin-animation .coin-5 {
-  background: url('assets/images/banner/coin5.png');
+  background: url('images/banner/coin5.png');
   height: 30px;
   width: 30px;
   background-repeat: no-repeat;
@@ -5292,7 +5292,7 @@ a.othrer3 {
 }
 
 .coin-animation .coin-5 {
-  background: url('assets/images/about/1010.png');
+  background: url('images/about/1010.png');
   height: 35px;
   width: 35px;
   background-repeat: no-repeat;
@@ -5306,7 +5306,7 @@ a.othrer3 {
 }
 
 .coin-animation .coin-5 {
-  background: url('assets/images/banner/coin1.png');
+  background: url('images/banner/coin1.png');
   height: 35px;
   width: 35px;
   background-repeat: no-repeat;
@@ -5320,7 +5320,7 @@ a.othrer3 {
 }
 
 .coin-animation .coin-5 {
-  background: url('assets/images/banner/coin3.png');
+  background: url('images/banner/coin3.png');
   height: 40px;
   width: 40px;
   background-repeat: no-repeat;
@@ -5413,7 +5413,7 @@ a.othrer3 {
 
 /*breatcome area*/
 .breatcome-area {
-  background: url(assets/images/footer/footer.jpg);
+  background: url(images/footer/footer.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5798,7 +5798,7 @@ button.btn2 {
 
 /*start footer section*/
 .footer {
-  background: url(assets/images/footer/footer.jpg);
+  background: url(images/footer/footer.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -7016,7 +7016,7 @@ div#particles .slider-area.style-five:before {
 }
 
 .phonebackground {
-  background-image: url('/assets/images/apple-iphone-13-2021-medium.png');
+  background-image: url('/images/apple-iphone-13-2021-medium.png');
   height: 100vh;
   background-size: cover;
   background-position: top;
