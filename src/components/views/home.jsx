@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+import CustomConnectButton from "../common/connectwallet";
+
 
 const Home = () => {
   // State to track time left and progress bar width
@@ -91,13 +92,20 @@ const Home = () => {
                     </div>
                   ))}
                 </div>
-                <div className="progress-bar-container">
+                <div className="progress-bar-container" style={{ marginTop: "15px" }}>
                   <div
                     className="progress-bar1"
                     style={{ width: `${progressWidth}%` }}
                   ></div>
                 </div>
-                <ConnectButton />
+                <h5 className="wow fadeInUp" data-wow-delay=".1s" style={{ textAlign: 'center', textSizeAdjust: 'auto', marginTop: '10px' }}>TOTAL USD RAISED: $6,376,706.75</h5>
+                <div style={{ display: "flex", alignItems: "center", marginTop: "15px", marginBottom: "30px" }}>
+                  <hr class="line" />
+                  <p class="text">1&nbsp;$AR+&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;$0.023525</p>
+                  <hr class="line" />
+                </div>
+
+                <CustomConnectButton />
               </div>
             </div>
           </div>

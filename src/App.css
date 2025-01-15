@@ -7069,3 +7069,19 @@ div#particles .slider-area.style-five:before {
   font-weight: bolder;
   line-height: 20px;
 }
+
+.line {
+  flex: 1; /* Allows the lines to take equal space */
+  border: 1.7px solid  ; /* Bright Purple */
+  margin: 0;
+}
+
+.text {
+  flex: 2; /* Takes twice the space of each line */
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.05em; /* Adjust to match tracking-wide */
+  margin: 0 10px;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import CustomConnectButton from "./connectwallet";
 
 const Navbar = () => {
   return (
@@ -13,7 +14,7 @@ const Navbar = () => {
           </div>
           <div className="col-lg-9">
             <nav className="cryptozen_menu">
-              <div className="header-menu">
+              <div className="header-menu" style={{ display: "flex", alignItems: "center" }}>
                 <ul className="nav_scroll">
                   <li><a href="#">Home</a>
                   </li>
@@ -24,11 +25,9 @@ const Navbar = () => {
                   <li><a href="team.html">FaQs</a>
                   </li>
                 </ul>
-                <div className="sidebar">
-                  <div className="header-src-btn">
-                    <div className="search-box-btn search-box-outer"><i className="fas fa-search"></i></div>
-                  </div>
-                  <div className="nav-btn navSidebar-button"><span className="icon flaticon-menu-2"></span></div>
+                <div className="sidebar" style={{ display: "flex", alignItems: "center" }}>
+                  <CustomConnectButton />
+                  <div className="nav-btn navSidebar-button" style={{ marginLeft: "20px"}}><span className="icon flaticon-menu-2"></span></div>
                 </div>
               </div>
             </nav>

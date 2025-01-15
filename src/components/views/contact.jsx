@@ -7,9 +7,6 @@ const Contact = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="dreamit-section-title two text-center pb-20">
-              <div className="dreamit-section-sub-title">
-                <h5> <img src="assets/images/new/title-img.png" alt="" />  Contacts</h5>
-              </div>
               <div className="dreamit-section-main-title">
                 <h1>Stay Update With Us</h1>
               </div>

@@ -8,15 +8,11 @@ const Feature = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="dreamit-section-title two text-center pb-20">
-              <div className="dreamit-section-sub-title">
-                <h5> <img src="assets/images/new/title-img.png" alt="" />  Crypto Features</h5>
-              </div>
               <div className="dreamit-section-main-title">
                 <h1>OUR FEATURES</h1>
               </div>
               <div className="dreamit-section-content-text">
-                <p>Monotonectally productivate virtual benefits vis-a-vis clicks
-                  ship. Seamlessly generate user friendly</p>
+                <p>Monotonectally productivate virtual benefits vis-a-vis clicks ship. Seamlessly generate user friendly</p>
               </div>
             </div>
           </div>

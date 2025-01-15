@@ -22,7 +22,8 @@ import {
 const config = getDefaultConfig({
   appName: 'AR Plus',
   projectId: '7e9ac68e0bc07dcc288064bb6df1110c',
-  chains: [mainnet, polygon, optimism, arbitrum, base],
+  // chains: [mainnet, polygon, optimism, arbitrum, base],
+  chains: [polygon],
   ssr: true, // If your dApp uses server side rendering (SSR)
 });
 
