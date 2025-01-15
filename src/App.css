@@ -7045,18 +7045,27 @@ div#particles .slider-area.style-five:before {
   width: 100%;
   background-color: white;
   border-radius: 999px;
-  height: 16px;
+  height: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
+  border: 0px;
 }
 
 .progress-bar1 {
   background-color: #37A3FE;
   height: 100%;
   border-radius: 999px;
+  border: 0px;
 }
 
-.progress-bar2 {
-  background-color: #8000ff; /* Bright purple */
-  height: 100%;
-  border-radius: 999px;
+.countdown-label {
+  color: #034F9B;
+  font-weight: bold;
+}
+
+.countdown-value {
+  color: #06174F;
+  font-size: 24px;
+  font-weight: bolder;
+  line-height: 20px;
 }

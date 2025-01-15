@@ -2,7 +2,6 @@ import React from 'react'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Landing from './pages/landing'
-import Dashboard from './pages/dashboard'
 import '@rainbow-me/rainbowkit/styles.css';
 import {
   getDefaultConfig,
@@ -21,7 +20,7 @@ import {
   QueryClient,
 } from "@tanstack/react-query";
 const config = getDefaultConfig({
-  appName: 'MegaDice',
+  appName: 'AR Plus',
   projectId: '7e9ac68e0bc07dcc288064bb6df1110c',
   chains: [mainnet, polygon, optimism, arbitrum, base],
   ssr: true, // If your dApp uses server side rendering (SSR)
@@ -39,7 +38,6 @@ function App() {
               <Routes>
                 <Route path="/">
                   <Route index element={<Landing />} />
-                  <Route path="dashboard" element={<Dashboard />} />
                 </Route>
               </Routes>
             </BrowserRouter>
