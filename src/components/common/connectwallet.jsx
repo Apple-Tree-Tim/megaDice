@@ -1,5 +1,4 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { useAccount, useSwitchChain } from 'wagmi';
 
 export default function CustomConnectButton() {
   return (

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import CustomConnectButton from "../common/connectwallet";
+import { useAccount } from 'wagmi';
 
 
 const Home = () => {
@@ -7,12 +8,16 @@ const Home = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
-    minutes: 5,
+    minutes: 10,
     seconds: 0,
   });
 
-  const [totalSeconds] = useState(300); // Total countdown seconds
+  const [totalSeconds] = useState(600); // Total countdown seconds
   const [progressWidth, setProgressWidth] = useState(100); // Progress bar width percentage
+  const [amountMatic, setAmountMatic] = useState();
+  const [amountAR, setAmountAR] = useState();
+
+  const account = useAccount();
   const timerRef = useRef(null); // UseRef for tracking the timer ID
 
   // Calculate and update time left every second
@@ -46,6 +51,18 @@ const Home = () => {
 
     return () => clearInterval(timerRef.current); // Cleanup on unmount
   }, [totalSeconds]);
+
+  const handleMaticChange = (e) => {
+    const value = e.target.value;
+    setAmountMatic(value);
+    setAmountAR(value * 2); // Assuming 1 Matic = 10 AR
+  };
+
+  const handleARChange = (e) => {
+    const value = e.target.value;
+    setAmountAR(value);
+    setAmountMatic(value / 2); // Assuming 1 Matic = 10 AR
+  };
 
   return (
     <div className="slider-area d-flex align-items-center">
@@ -104,8 +121,41 @@ const Home = () => {
                   <p class="text">1&nbsp;$AR+&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;$0.023525</p>
                   <hr class="line" />
                 </div>
-
-                <CustomConnectButton />
+                {account.isConnected ? (
+                  <>
+                    <div className="row">
+                      <div className="col-lg-6">
+                        <div className="form_box mb-2">
+                          <input
+                            className="form-control"
+                            inputMode="numeric"
+                            name="matic"
+                            value={amountMatic}
+                            onChange={handleMaticChange}
+                            placeholder="Buy with MATIC"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-lg-6">
+                        <div className="form_box mb-2">
+                          <input
+                            className="form-control"
+                            inputMode="numeric"
+                            name="ar"
+                            value={amountAR}
+                            onChange={handleARChange}
+                            placeholder="Receive $AR+"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="about-btn mt-20 col-lg-12" style={{ textAlign: 'center' }}>
+                      <a href="#" style={{ width: '100%' }}>Buy Now</a>
+                    </div>
+                  </>
+                ) : (
+                  <CustomConnectButton accountStatus="full" showBalance={false} />
+                )}
               </div>
             </div>
           </div>
