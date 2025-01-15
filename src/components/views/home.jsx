@@ -116,7 +116,7 @@ const Home = () => {
                   ></div>
                 </div>
                 <h5 className="wow fadeInUp" data-wow-delay=".1s" style={{ textAlign: 'center', textSizeAdjust: 'auto', marginTop: '10px' }}>TOTAL USD RAISED: $6,376,706.75</h5>
-                <div style={{ display: "flex", alignItems: "center", marginTop: "15px", marginBottom: "30px" }}>
+                <div style={{ display: "flex", alignItems: "center", marginTop: "15px", marginBottom: "40px" }}>
                   <hr class="line" />
                   <p class="text">1&nbsp;$AR+&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;$0.023525</p>
                   <hr class="line" />

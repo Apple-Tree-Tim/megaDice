@@ -7,9 +7,6 @@ const Purchaseway = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="dreamit-section-title two text-center pb-20">
-              <div className="dreamit-section-sub-title">
-                <h5> <img src="assets/images/new/title-img.png" alt="" />  HOW TO BUY?</h5>
-              </div>
               <div className="dreamit-section-main-title">
                 <h1>HOW TO BUY $DICE On PreSale</h1>
               </div>
