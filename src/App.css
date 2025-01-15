@@ -90,7 +90,7 @@ Version: 0.1
 .cryptozen_menu ul li a {
   display: inline-block;
   font-size: 15px;
-  padding: 36px 14px;
+  padding: 24px 14px;
   text-transform: capitalize;
   transition: .5s;
   letter-spacing: 1px;
@@ -975,13 +975,20 @@ span.other {
 
 
 /* start coundown section*/
+.countdown {
+  background: white;
+  padding: 12px 24px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .countdown-area {
-  background: rgb(1, 53, 126, 0.7);
-  width: 63%;
-  padding: 30px 0 23px;
+  background: rgb(1, 53, 126, 0.2);
+  width: 100%;
+  padding: 30px 23px;
   z-index: 22;
   border-radius: 7px;
-  position: absolute;
   top: 86%;
   left: -112px;
 }
@@ -7024,10 +7031,32 @@ div#particles .slider-area.style-five:before {
   margin-top: 100px;
 }
 
-.video-content {
+.hero-content {
   width: 100%;
-  height: 45vh;
-  overflow: hidden;
-  position: relative;
-  opacity: 0.7;
+  height: 100%;
+}
+
+.hero-image {
+  width: 90%;
+  height: 100%;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: white;
+  border-radius: 999px;
+  height: 16px;
+  margin-bottom: 20px;
+}
+
+.progress-bar1 {
+  background-color: #37A3FE;
+  height: 100%;
+  border-radius: 999px;
+}
+
+.progress-bar2 {
+  background-color: #8000ff; /* Bright purple */
+  height: 100%;
+  border-radius: 999px;
 }

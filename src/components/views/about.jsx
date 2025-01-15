@@ -7,14 +7,11 @@ const About = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="dreamit-section-title two text-center pb-20">
-              <div className="dreamit-section-sub-title">
-                <h5> <img src="assets/images/new/title-img.png" alt="" />  Token Rating</h5>
-              </div>
               <div className="dreamit-section-main-title">
-                <h1>WHAT IS MEGA DICE?</h1>
+                <h1>WHAT IS AR PLUS (AR+) TOKEN?</h1>
               </div>
               <div className="dreamit-section-content-text">
-                <p>ALREADY A RAPIDLY GROWING GLOBAL CRYPTO CASINO BRAND WITH OVER 50K PLAYERS <br />Mega Dice is not a new casino. As one of the top brands in the crypto casino space our focus is growth and adding value to our players, like with the introduction of $DICE</p>
+                <p><span style={{ fontWeight: "bold" }}>AR+ Token</span> serves as the cornerstone of the platform's virtual economy, supporting all user interactions and transactions within the digital world as a cryptocurrency. It can be used across various scenarios on the platform, such as participating in virtual events, playing games, purchasing digital products and services, showcasing artwork, and accessing exclusive areas. Users can earn AR+ Tokens through their activities on the platform or purchase them externally to enhance their virtual experiences. Thus, AR+ Token encourages interactions in the digital realm while serving as a tool for creating and sharing economic value among users.</p>
               </div>
             </div>
           </div>

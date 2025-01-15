@@ -7,15 +7,8 @@ const Faqs = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="dreamit-section-title two text-center pb-20">
-              <div className="dreamit-section-sub-title">
-                <h5> <img src="assets/images/new/title-img.png" alt="" />  FAQ</h5>
-              </div>
               <div className="dreamit-section-main-title">
                 <h1>FREQUENTLY ASKED QUESTIONS</h1>
-              </div>
-              <div className="dreamit-section-content-text">
-                <p>Monotonectally productivate virtual benefits vis-a-vis clicks
-                  ship. Seamlessly generate user friendly</p>
               </div>
             </div>
           </div>
@@ -26,28 +19,58 @@ const Faqs = () => {
               <div>
                 <ul className="accordion">
                   <li>
-                    <a>What is ICO</a>
-                    <p>Holisticly coordinate highes standards in communities rather than cute
-                      ures. Distinctivelys supply highly efficients networks for integrated fors
-                      vize adaptive value through enabled</p>
+                    <a>What is AR+ Token?</a>
+                    <p>AR+ Token is a cryptocurrency that forms the backbone of our platform's virtual economy. Users can utilize AR+ Token to participate in events, purchase digital products, and access other services on the platform.</p>
                   </li>
                   <li>
-                    <a>How can I participate in the ICO Token sale?</a>
-                    <p>Holisticly coordinate highes standards in communities rather than cute
-                      ures. Distinctivelys supply highly efficients networks for integrated fors
-                      vize adaptive value through enabled</p>
+                    <a>How Can I Buy AR+ Token?</a>
+                    <p>You can purchase AR+ Token through official sales events on our website or from select cryptocurrency exchanges.</p>
                   </li>
                   <li>
-                    <a>What cryptocurrencies can I use to purchase?</a>
-                    <p>Holisticly coordinate highes standards in communities rather than cute
-                      ures. Distinctivelys supply highly efficients networks for integrated fors
-                      vize adaptive value through enabled</p>
+                    <a>Which Blockchain Does AR+ Token Operate On?</a>
+                    <p>AR+ Token operates on the Polygon network, which offers low transaction fees and fast transfers.</p>
                   </li>
                   <li>
-                    <a>What cryptocurrencies can I use to purchase?</a>
-                    <p>Holisticly coordinate highes standards in communities rather than cute
-                      ures. Distinctivelys supply highly efficients networks for integrated fors
-                      vize adaptive value through enabled</p>
+                    <a>What Are the Use Cases for AR+ Token?</a>
+                    <p>
+                      - Participation in virtual events <br/>
+                      - Purchasing digital products and services<br/>
+                      - Showcasing digital art<br/>
+                      - Accessing exclusive areas and events<br/>
+                      - Platform-based games and rewards<br/>
+                    </p>
+                  </li>
+                  <li>
+                    <a></a>
+                    <p></p>
+                  </li>
+                  <li>
+                    <a></a>
+                    <p></p>
+                  </li>
+                  <li>
+                    <a></a>
+                    <p></p>
+                  </li>
+                  <li>
+                    <a></a>
+                    <p></p>
+                  </li>
+                  <li>
+                    <a></a>
+                    <p></p>
+                  </li>
+                  <li>
+                    <a></a>
+                    <p></p>
+                  </li>
+                  <li>
+                    <a></a>
+                    <p></p>
+                  </li>
+                  <li>
+                    <a></a>
+                    <p></p>
                   </li>
                 </ul>
               </div>

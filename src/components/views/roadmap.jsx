@@ -89,9 +89,6 @@ const Roadmap = () => {
 
           <div className="col-lg-6 col-md-12">
             <div className="dreamit-section-title  pb-20">
-              <div className="dreamit-section-sub-title">
-                <h5>REASON FOR CHOOSE US</h5>
-              </div>
               <div className="dreamit-section-main-title">
                 <h1>Why Choose Our Token?</h1>
               </div>
