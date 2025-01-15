@@ -15,7 +15,7 @@ const SidebarCart = () => {
             <div className="sidebar-info-contents">
               <div className="content-inner">
                 <div className="logo">
-                  <a href="index.html"><img src="assets/images/one.png" alt="" /></a>
+                  <a href="index.html"><img style={{ width: "60%" }} src="assets/images/one.png" alt="" /></a>
                 </div>
                 <div className="content-text">
                   <p className="text-white">The argument in placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor theo lacus egestas etiusto odio data center.</p>

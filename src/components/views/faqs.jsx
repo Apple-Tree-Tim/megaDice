@@ -2,7 +2,7 @@ import React from "react";
 
 const Faqs = () => {
   return (
-    <div className="faq-section style-five pt-100 pb-100" style={{ height: "1600px"}}>
+    <div className="faq-section style-five pt-100 pb-100" style={{ height: "1700px"}}>
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
