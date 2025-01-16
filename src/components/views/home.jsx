@@ -18,7 +18,7 @@ const Home = ({setStage, stage}) => {
   const account = useAccount();
   const timerRef = useRef(null);
   const stageDurations = [60, 70]; // Stage durations in seconds
-  const stagePrices = [0.5, 0.75]; // Prices for each stage
+  const stagePrices = [0.5, 0.75, 1]; // Prices for each stage
   const [totalSeconds, setTotalSeconds] = useState(stageDurations[0]); // Set initial duration
 
   useEffect(() => {
@@ -83,10 +83,10 @@ const Home = ({setStage, stage}) => {
                 <img className="hero-image" src="assets/images/main5.png" alt="Hero" />
               </div>
               <h1 className="wow fadeInUp" data-wow-delay=".1s">
-                Cryptozen<span> ICO</span>
+                <span>AR+ </span> Token Presale
               </h1>
               <h4 className="wow fadeInUp" data-wow-delay=".3s" style={{ marginBottom: "10px" }}>
-                For the cryptocurrency business
+                Get the <span>AR+ Token</span> for virtual economy
               </h4>
               <div className="slider-button wow fadeInUp" data-wow-delay=".6s">
                 <a href="#">Download Whitepapers</a>
