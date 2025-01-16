@@ -50,7 +50,7 @@ const Tokenomics = () => {
           <div className="col-lg-9">
             <div className="dreamit-section-title  pb-20">
               <div className="dreamit-section-main-title">
-                <h1>1 CNL = 0.0013 BTC</h1>
+                <h1>1 AR+ = 1 MATIC</h1>
               </div>
             </div>
           </div>
