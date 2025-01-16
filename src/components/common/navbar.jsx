@@ -16,13 +16,13 @@ const Navbar = () => {
             <nav className="cryptozen_menu">
               <div className="header-menu" style={{ display: "flex", alignItems: "center" }}>
                 <ul className="nav_scroll">
-                  <li><a href="#">Home</a>
+                  <li><a href="#home">Home</a>
                   </li>
-                  <li><a href="about.html">How to buy</a>
+                  <li><a href="#about">How to buy</a>
                   </li>
-                  <li><a href="road-map.html">road map</a>
+                  <li><a href="#roadmap">road map</a>
                   </li>
-                  <li><a href="team.html">FaQs</a>
+                  <li><a href="#faqs">FaQs</a>
                   </li>
                 </ul>
                 <div className="sidebar" style={{ display: "flex", alignItems: "center" }}>

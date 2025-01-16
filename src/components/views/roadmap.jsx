@@ -2,7 +2,7 @@ import React from "react";
 
 const Roadmap = () => {
   return (
-    <div className="road-map pt-100 pb-100">
+    <div className="road-map pt-100 pb-100" id="roadmap">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

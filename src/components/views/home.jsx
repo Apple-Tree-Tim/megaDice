@@ -65,7 +65,7 @@ const Home = () => {
   };
 
   return (
-    <div className="slider-area d-flex align-items-center">
+    <div className="slider-area d-flex align-items-center" id="home">
       <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}

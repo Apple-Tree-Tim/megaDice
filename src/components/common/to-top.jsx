@@ -1,8 +1,16 @@
 import React from "react";
 
 const ToTop = () => {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+  
   return (
-    <div className="scroll-area">
+    <div className="scroll-area" onClick={scrollToTop} >
       <div className="top-wrap">
         <div className="go-top-btn-wraper">
           <div className="go-top go-top-button">
