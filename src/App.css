@@ -3173,6 +3173,12 @@ canvas#yourChart {
   margin: auto;
 }
 
+@media (max-width: 767px) {
+  .shape13 {
+    display: none;
+  }
+}
+
 .chart-menu ul li span {
   font-size: 16px;
   font-family: 'Inter';
