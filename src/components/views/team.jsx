@@ -1,98 +1,109 @@
 import React from "react";
 
+const teamMembers = [
+  {
+    id: 1,
+    name: "John Abraham",
+    role: "Head of Marketing",
+    image: "assets/images/team/team-1.png",
+    social: {
+      facebook: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+  },
+  {
+    id: 2,
+    name: "Robert Philips",
+    role: "Chef Executive",
+    image: "assets/images/team/team-2.png",
+    social: {
+      facebook: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+  },
+  {
+    id: 3,
+    name: "Sandra Irvin",
+    role: "HR Manager",
+    image: "assets/images/team/team-3.png",
+    social: {
+      facebook: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+  },
+  {
+    id: 4,
+    name: "Michael Chen",
+    role: "Software Engineer",
+    image: "assets/images/team/team-4.png",
+    social: {
+      facebook: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+  },
+  {
+    id: 5,
+    name: "Emily Carter",
+    role: "Product Manager",
+    image: "assets/images/team/team-1.png",
+    social: {
+      facebook: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+  },
+];
+
 const Team = () => {
   return (
-    <div className="team-section pt-80 pb-80">
+    <section className="team-section pt-80 pb-80">
       <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="dreamit-section-title text-center pb-20">
-              <div className="dreamit-section-sub-title">
-                <h5>OUR TEAM</h5>
-              </div>
-              <div className="dreamit-section-main-title">
-                <h1>Meet Our Expert Team</h1>
-              </div>
-            </div>
-          </div>
+        <div className="text-center pb-20">
+          <h5 className="dreamit-section-sub-title">OUR TEAM</h5>
+          <h1 className="dreamit-section-main-title">Meet Our Expert Team</h1>
         </div>
         <div className="row">
-          <div className="col-lg-3 col-md-6">
-            <div className="single-team-box">
-              <div className="team-thumb">
-                <img src="assets/images/team/team-1.png" alt="" />
+          {teamMembers.map(({ id, name, role, image, social }) => (
+            <div key={id} className="col-lg-4 col-md-6">
+              <div className="single-team-box">
+                <div className="team-thumb">
+                  <img
+                    src={image || "assets/images/default-team.png"}
+                    alt={`Portrait of ${name}, ${role}`}
+                  />
                   <div className="team-social-icon">
                     <ul>
-                      <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                      <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
-                      <li><a href="#"><i className="fab fa-twitter"></i></a></li>
+                      {Object.entries(social).map(
+                        ([platform, link]) =>
+                          link && (
+                            <li key={platform}>
+                              <a
+                                href={link}
+                                aria-label={`Visit ${name}'s ${platform}`}
+                              >
+                                <i className={`fab fa-${platform}`}></i>
+                              </a>
+                            </li>
+                          )
+                      )}
                     </ul>
                   </div>
-              </div>
-              <div className="team-content">
-                <h3>John Abraham</h3>
-                <span>Head of Marketing</span>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <div className="single-team-box">
-              <div className="team-thumb">
-                <img src="assets/images/team/team-2.png" alt="" />
-                  <div className="team-social-icon">
-                    <ul>
-                      <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                      <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
-                      <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-                    </ul>
-                  </div>
-              </div>
-              <div className="team-content two">
-                <h3>Robert Philips</h3>
-                <span>Chef Executive</span>
+                </div>
+                <div className="team-content">
+                  <h3>{name}</h3>
+                  <span>{role}</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <div className="single-team-box">
-              <div className="team-thumb">
-                <img src="assets/images/team/team-3.png" alt="" />
-                  <div className="team-social-icon">
-                    <ul>
-                      <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                      <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
-                      <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-                    </ul>
-                  </div>
-              </div>
-              <div className="team-content three">
-                <h3>Sandra Irvin</h3>
-                <span>HR Manager</span>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <div className="single-team-box">
-              <div className="team-thumb">
-                <img src="assets/images/team/team-4.png" alt="" />
-                  <div className="team-social-icon">
-                    <ul>
-                      <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                      <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
-                      <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-                    </ul>
-                  </div>
-              </div>
-              <div className="team-content four">
-                <h3>Julia Pacheco</h3>
-                <span>CEO & Founder</span>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default Team;

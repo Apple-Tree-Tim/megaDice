@@ -7098,3 +7098,9 @@ div#particles .slider-area.style-five:before {
   width: 40px;
   height: 40px;
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center-aligns items when fewer members remain */
+}
