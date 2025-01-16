@@ -1,11 +1,12 @@
 import React from "react";
+import Marquee from "react-fast-marquee"; // Ensure you have this installed: `npm install react-fast-marquee`
 
 const teamMembers = [
   {
     id: 1,
-    name: "John Abraham",
-    role: "Head of Marketing",
-    image: "assets/images/team/team-1.png",
+    name: "Raven - X",
+    role: "CEO",
+    image: "assets/images/team/team1.png",
     social: {
       facebook: "#",
       linkedin: "#",
@@ -14,9 +15,9 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Robert Philips",
-    role: "Chef Executive",
-    image: "assets/images/team/team-2.png",
+    name: "Hawk - 9",
+    role: "Developer",
+    image: "assets/images/team/team2.png",
     social: {
       facebook: "#",
       linkedin: "#",
@@ -25,9 +26,9 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "Sandra Irvin",
-    role: "HR Manager",
-    image: "assets/images/team/team-3.png",
+    name: "Wise Man",
+    role: "Game Developer",
+    image: "assets/images/team/team3.png",
     social: {
       facebook: "#",
       linkedin: "#",
@@ -36,9 +37,9 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Michael Chen",
-    role: "Software Engineer",
-    image: "assets/images/team/team-4.png",
+    name: "Lily - 3",
+    role: "Developer",
+    image: "assets/images/team/team4.png",
     social: {
       facebook: "#",
       linkedin: "#",
@@ -47,9 +48,9 @@ const teamMembers = [
   },
   {
     id: 5,
-    name: "Emily Carter",
-    role: "Product Manager",
-    image: "assets/images/team/team-1.png",
+    name: "Water Lily - Y",
+    role: "Financial Expert",
+    image: "assets/images/team/team5.png",
     social: {
       facebook: "#",
       linkedin: "#",
@@ -62,13 +63,25 @@ const Team = () => {
   return (
     <section className="team-section pt-80 pb-80">
       <div className="container">
-        <div className="text-center pb-20">
-          <h5 className="dreamit-section-sub-title">OUR TEAM</h5>
-          <h1 className="dreamit-section-main-title">Meet Our Expert Team</h1>
+        <div className="row" style={{marginBottom: "30px"}}>
+          <div className="col-lg-12">
+            <div className="dreamit-section-title text-center pb-20">
+              <div className="dreamit-section-sub-title">
+                <h5>OUR TEAM</h5>
+              </div>
+              <div className="dreamit-section-main-title">
+                <h1>Meet Our Expert Team</h1>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="row">
+        {/* Marquee effect */}
+        <Marquee gradient={false} speed={40}>
           {teamMembers.map(({ id, name, role, image, social }) => (
-            <div key={id} className="col-lg-4 col-md-6">
+            <div
+              key={id}
+              style={{ margin: "0px 20px" }}
+            >
               <div className="single-team-box">
                 <div className="team-thumb">
                   <img
@@ -100,7 +113,7 @@ const Team = () => {
               </div>
             </div>
           ))}
-        </div>
+        </Marquee>
       </div>
     </section>
   );

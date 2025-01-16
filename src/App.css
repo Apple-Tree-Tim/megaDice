@@ -981,6 +981,7 @@ span.other {
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
+  opacity: 90%;
 }
 
 .countdown-area {
@@ -7049,6 +7050,7 @@ div#particles .slider-area.style-five:before {
   margin-top: 10px;
   margin-bottom: 20px;
   border: 0px;
+  opacity: 80%;
 }
 
 .progress-bar1 {
