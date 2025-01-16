@@ -9,7 +9,7 @@ const Feature = () => {
           <div className="col-lg-12">
             <div className="dreamit-section-title two text-center pb-20">
               <div className="dreamit-section-main-title">
-                <h1>OUR FEATURES</h1>
+                <h1><span style={{ color: "#37A3FE", fontWeight: "bolder"}}>AR+</span> TOKEN ECOSYSTEM</h1>
               </div>
               <div className="dreamit-section-content-text">
                 <p>Monotonectally productivate virtual benefits vis-a-vis clicks ship. Seamlessly generate user friendly</p>
@@ -19,13 +19,13 @@ const Feature = () => {
         </div>
         <div className="row pt-10">
           <div className="col-lg-4">
-            <div className="single-service-box" style={{height: "97%"}}>
+            <div className="single-service-box" style={{height: "100%"}}>
               <div className="service-icon">
                 <i className="flaticon-gift"></i>
               </div>
               <div className="service-content">
-                <h2>DAILY REWARDS TO HOLDERS BASED ON CASINO PERFORMANCE</h2>
-                <p>No other platform does it quite like Mega Dice. For holders of $DICE that have their tokens staked, we introduce our first of its kind daily rewards based on the performance of Mega Dice Casino. Now everyone can share in the success of one of the worlds fastest growing online crypto casinos. There is no better time than now to to enjoy the benefits that come with holding $DICE</p>
+                <h2><span style={{ color: "#37A3FE", fontWeight: "bolder"}}>AR+</span> FOR YOU TO HAVE A UNIQUE DIGITAL EXPERIENCE</h2>
+                <p>We are here to do what no other platform has been able to do so far. Our competitors have chosen to progress in a certain area but have not made much progress. We will create a new digital world with you and build the unique life where we can be alone with our adventurous and imaginative power.</p>
                 <div className="slider-button wow fadeInUp" data-wow-delay=".8s" style={{visibility: "visible", animationDelay: "0.8s", animationName: "fadeInUp", marginRight: "0px", marginTop: "100px"}} >
                   <a href="#">Buy Now</a>
                 </div>
@@ -41,7 +41,7 @@ const Feature = () => {
                   </div>
                   <div className="service-content">
                     <h2>LIMITED EDITION NFTS</h2>
-                    <p>Select holders of $DICE and Mega Dice players will receive limited edition NFTs that will give access to special privileges and rewards, or can be traded on the market. The choice is yours</p>
+                    <p>Select owners of <span style={{ color: "#37A3FE", fontWeight: "bolder"}}>AR+</span> players will receive access to exclusive privileges and rewards or a limited number of NFTs that can be traded on the marketplace.</p>
                   </div>
                 </div>
               </div>
@@ -52,29 +52,29 @@ const Feature = () => {
                   </div>
                   <div className="service-content">
                     <h2>GAMING ECOSYSTEM</h2>
-                    <p>$DICE is seamlessly integrated to Mega Dice casino, offering exclusive access, rewards, and benefits</p>
+                    <p><span style={{ color: "#37A3FE", fontWeight: "bolder"}}>AR+</span> Token will be the future gaming leader with AR/VR based games offering exclusive access, rewards and benefits.</p>
                   </div>
                 </div>
               </div>
               <div className="col-lg-6">
-                <div className="single-service-box">
+                <div className="single-service-box" style={{margin: "0px"}}>
                   <div className="service-icon">
                     <i className="flaticon-gift"></i>
                   </div>
                   <div className="service-content">
                     <h2>EARLY BIRD BONUSES</h2>
-                    <p>Early participants in the pre-sale receive bonus $DICE tokens, increasing their initial investment value</p>
+                    <p><span style={{ color: "#37A3FE", fontWeight: "bolder"}}>AR+</span> Token will offer a unique experience with airdrop tokens across its entire ecosystem and on each exchange listing.</p>
                   </div>
                 </div>
               </div>
               <div className="col-lg-6">
-                <div className="single-service-box">
+                <div className="single-service-box" style={{margin: "0px"}}>
                   <div className="service-icon">
                     <i className="flaticon-gift"></i>
                   </div>
                   <div className="service-content">
-                    <h2>REFERRAL PROGRAM</h2>
-                    <p>$DICE holders can enjoy a generous 25% rev-share through the Mega Dice Referral Program</p>
+                    <h2>STAKE EARNINGS</h2>
+                    <p>You can also grow your savings exponentially with our annual staking rewards.</p>
                   </div>
                 </div>
               </div>

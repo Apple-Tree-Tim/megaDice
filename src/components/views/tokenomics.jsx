@@ -25,11 +25,11 @@ ChartJS.register(
 
 const Tokenomics = () => {
   const data = {
-    labels: ["Italy", "France", "Spain", "USA", "Argentina"],
+    labels: ["Token in Circulation", "B&D Account", "Marketing Account", "Airdrop Account", "Stake Account","Project Team", "Burn Account"],
     datasets: [
       {
-        backgroundColor: ["#4DB866", "#EDB019", "#E36D23", "#F08A1E", "#39A2D1"],
-        data: [55, 49, 44, 24, 15],
+        backgroundColor: ["#6CE5E8", "#7ED957", "#FFDE59", "#FF914D", "#31356E", "#F9EF0F", "#D90F0F"],
+        data: [30, 5, 4, 4, 8, 6, 43],
       },
     ],
   };
@@ -68,32 +68,33 @@ const Tokenomics = () => {
                 <div className="col-lg-6">
                   <div className="chart-menu">
                     <ul>
-                      <li className="another1"><span>12%</span>Reserved Funding</li>
-                      <li className="another2"><span>8%</span>Product Development</li>
-                      <li className="another3"><span>40%</span>Bounty Campaign</li>
+                      <li className="another1"><span>30%</span>Token in Circulation</li>
+                      <li className="another3"><span>4%</span>Marketing Account</li>
+                      <li className="another5"><span>8%</span>Stake Account</li>
+                      <li className="another7"><span>43%</span>Burn Account</li>
                     </ul>
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="chart-menu">
                     <ul>
-                      <li className="another4"><span>40%</span>Bounty Campaign</li>
-                      <li className="another5"><span>20%</span>Reserved Funding</li>
-                      <li className="another6"><span>15%</span>Bounty Campaign</li>
+                      <li className="another2"><span>5%</span>B&D Account</li>
+                      <li className="another4"><span>4%</span>Airdrop Account</li>
+                      <li className="another6"><span>6%</span>Project Team</li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div className="shape13">
-                <img src="assets/images/shape2.png" alt="" />
+                <img src="assets/images/shepa2.png" alt="" />
               </div>
             </div>
           </div>
           <div className="col-lg-6 col-md-12">
             <div className="table-reponsive box">
               <div className="table-responsive-content">
-                <h2>$DICE has total supply of <span>420,000,000</span></h2>
-                <p>The Mega Dice token serves as the utility token of our platform, enabling users to access premium content, participate in community governance, and redeem exclusive rewards and benefits.</p>
+                <h2>$AR+ has total supply of <span>420,000,000</span></h2>
+                <p>The AR PLUS token serves as the utility token of our platform, enabling users to access premium content, participate in community governance, and redeem exclusive rewards and benefits.</p>
               </div>
               <table id="example" className="table table-striped table-bordered">
                 <thead>

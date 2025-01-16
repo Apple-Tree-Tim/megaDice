@@ -1713,7 +1713,7 @@ span.another {
   margin-bottom: 30px;
   padding: 45px 0 46px;
   right: 44px;
-  min-height: 367px;
+  min-height: 350px;
 }
 
 .single-service-box.two {
@@ -3052,27 +3052,31 @@ canvas#yourChart {
   height: 20px;
   width: 20px;
   border-radius: 100%;
-  background: #AA3BC5;
+  background: #6CE5E8;
 }
 
 .chart-menu li.another2:before {
-  background: #1ED4A4;
+  background: #7ED957;
 }
 
 .chart-menu li.another3:before {
-  background: #F97431;
+  background: #FFDE59;
 }
 
 .chart-menu li.another4:before {
-  background: #09B1F2;
+  background: #FF914D;
 }
 
 .chart-menu li.another5:before {
-  background: #FEB81A;
+  background: #31356E;
 }
 
 .chart-menu li.another6:before {
-  background: #ED3954;
+  background: #F9EF0F;
+}
+
+.chart-menu li.another7:before {
+  background: #D90F0F;
 }
 
 /*graph section*/
@@ -4970,7 +4974,15 @@ a.othrer3 {
 .blog-content-text p {
   transition: .5s;
   color: #616161;
-  margin: 0 0 11px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.blog-content-text h5 {
+  transition: .5s;
+  color: black;
+  font-size: 18px;
+  text-align: center;
 }
 
 /*blog meta*/
@@ -5002,11 +5014,11 @@ a.othrer3 {
 .blog-content {
   left: 35px;
   bottom: 0;
-  padding: 24px 0px 22px 23px;
+  padding: 20px 20px 20px 20px;
   background: #fff;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  min-height: 193px;
+  min-height: 210px;
 }
 
 .blog-title h2 {

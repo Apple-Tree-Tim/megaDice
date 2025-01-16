@@ -8,7 +8,7 @@ const Purchaseway = () => {
           <div className="col-lg-12">
             <div className="dreamit-section-title two text-center pb-20">
               <div className="dreamit-section-main-title">
-                <h1>HOW TO BUY $DICE On PreSale</h1>
+                <h1>HOW TO BUY $AR+ On PreSale</h1>
               </div>
               <div className="dreamit-section-content-text">
                 <p>Monotonectally productivate virtual benefits vis-a-vis clicks
@@ -35,7 +35,7 @@ const Purchaseway = () => {
               </div>
               <div className="about-content">
                 <h2> 1 - CONNECT YOUR WALLET</h2>
-                <p>Use Metamask or Trust Wallet to connect your wallet in seconds.</p>
+                <p>Use Metamask, Trust Wallet, Coinbase Wallet, Phantom, MathWallet, TokenPocket, SafePal Wallet to connect your wallet in seconds.</p>
               </div>
             </div>
             <div className="about-single-icon-box d-flex">
@@ -44,7 +44,7 @@ const Purchaseway = () => {
               </div>
               <div className="about-content">
                 <h2>2 - ENTER PRESALE</h2>
-                <p>Determine how much $DICE you want to buy. You can purchase with USDT along with ETH, BNB and SOL</p>
+                <p>Determine how much AR+ you want to buy. You can make a purchase with MATIC</p>
               </div>
             </div>
             <div className="about-single-icon-box d-flex">
@@ -53,7 +53,7 @@ const Purchaseway = () => {
               </div>
               <div className="about-content">
                 <h2>3 - CLAIM $DICE</h2>
-                <p>Congratulations! You can claim your $DICE after the presale ends</p>
+                <p>Congratulations! You can claim your AR+ after the presale ends</p>
               </div>
             </div>
           </div>

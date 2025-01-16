@@ -18,16 +18,55 @@ const Timeline = () => {
             <div className="single-blog-box">
               <div className="blog-thumb">
                 <img src="assets/images/blog/blog2.jpg" alt="" />
-                  <div className="blog-meta">
-                    <div className="meta-content">
-                      <h4>1</h4>
-                      <span>Season</span>
-                    </div>
+                <div className="blog-meta">
+                  <div className="meta-content">
+                    <h4>1</h4>
+                    <span>Season</span>
                   </div>
+                </div>
               </div>
               <div className="blog-content">
                 <div className="blog-content-text">
-                  <p>Join the excitement with a stake in our $750,000 USD airdrop. Stay active, hit a wager volume of $5,000 USD within 21 days, and enjoy retroactive rewards. Based on expected launch value.</p>
+                  <h5>PRE-SALE AIRDROP + 10% VISUAL</h5>
+                  <p>+10% Airdrp token gift on all token purchases under $250,000 in pre-sale before exchange listing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6">
+            <div className="single-blog-box">
+              <div className="blog-thumb">
+                <img src="assets/images/blog/coin2.jpg" alt="" />
+                <div className="blog-meta">
+                  <div className="meta-content">
+                    <h4>2</h4>
+                    <span>Season</span>
+                  </div>
+                </div>
+              </div>
+              <div className="blog-content">
+                <div className="blog-content-text">
+                  <h5>PRE-SALE AIRDROP + 30% GÖRSEL</h5>
+                  <p>+30% Airdrp token gift on all token purchases under $250,000 in pre-sale before exchange listing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6">
+            <div className="single-blog-box">
+              <div className="blog-thumb">
+                <img src="assets/images/blog/blog4.jpg" alt="" />
+                <div className="blog-meta">
+                  <div className="meta-content">
+                    <h4>3</h4>
+                    <span>Season</span>
+                  </div>
+                </div>
+              </div>
+              <div className="blog-content">
+                <div className="blog-content-text">
+                  <h5>SOCIAL MEDIA AR+ 150,000 TOKENS VISUAL</h5>
+                  <p>You can earn 100,000 or 50,000 AR+ Tokens by sharing content on social media platforms YouTube, X, Tik Tok and Facebook.</p>
                 </div>
               </div>
             </div>
@@ -36,52 +75,17 @@ const Timeline = () => {
             <div className="single-blog-box">
               <div className="blog-thumb">
                 <img src="assets/images/blog/blog3.jpg" alt="" />
-                  <div className="blog-meta">
-                    <div className="meta-content">
-                      <h4>2</h4>
-                      <span>Season</span>
-                    </div>
+                <div className="blog-meta">
+                  <div className="meta-content">
+                    <h4>4</h4>
+                    <span>Season</span>
                   </div>
-              </div>
-              <div className="blog-content">
-                <div className="blog-content-text">
-                  <p>Don't miss out on your share of the $750,000 USD airdrop. Wager with any cryptocurrency from presale to token launch and win big.Based on expected launch value.</p>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <div className="single-blog-box">
-              <div className="blog-thumb">
-                <img src="assets/images/blog/blog1.jpg" alt="" />
-                  <div className="blog-meta">
-                    <div className="meta-content">
-                      <h4>3</h4>
-                      <span>Season</span>
-                    </div>
-                  </div>
-              </div>
               <div className="blog-content">
                 <div className="blog-content-text">
-                  <p>Don't miss out on your share of the $750,000 USD airdrop. Wager with any cryptocurrency from presale to token launch and win big.Based on expected launch value.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <div className="single-blog-box">
-              <div className="blog-thumb">
-                <img src="assets/images/blog/blog1.jpg" alt="" />
-                  <div className="blog-meta">
-                    <div className="meta-content">
-                      <h4>3</h4>
-                      <span>Season</span>
-                    </div>
-                  </div>
-              </div>
-              <div className="blog-content">
-                <div className="blog-content-text">
-                  <p>Don't miss out on your share of the $750,000 USD airdrop. Wager with any cryptocurrency from presale to token launch and win big.Based on expected launch value.</p>
+                  <h5>SOCIAL MEDIA AR+ 1,000,000 TOKENS VISUAL</h5>
+                  <p>You can earn 5,000 AR+ Tokens by following and liking our YouTube, X, Tik Tok and Facebook accounts.</p>
                 </div>
               </div>
             </div>
