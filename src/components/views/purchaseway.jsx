@@ -52,7 +52,7 @@ const Purchaseway = () => {
                 <img src="assets/images/new/icon3.png" alt="" />
               </div>
               <div className="about-content">
-                <h2>3 - CLAIM $DICE</h2>
+                <h2>3 - CLAIM $AR+</h2>
                 <p>Congratulations! You can claim your AR+ after the presale ends</p>
               </div>
             </div>
