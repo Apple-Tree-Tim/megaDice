@@ -3,7 +3,7 @@ import React from "react";
 const Partner = () => {
   return (
     <div className="blog-section pt-20 pb-20">
-      <div style={{ padding: "0px 120px" }}>
+      <div style={{ padding: "30px 120px" }}>
         <div
           style={{
             display: "grid",
