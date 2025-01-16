@@ -116,10 +116,19 @@ const Home = () => {
                   ></div>
                 </div>
                 <h5 className="wow fadeInUp" data-wow-delay=".1s" style={{ textAlign: 'center', textSizeAdjust: 'auto', marginTop: '10px' }}>TOTAL USD RAISED: $6,376,706.75</h5>
-                <div style={{ display: "flex", alignItems: "center", marginTop: "15px", marginBottom: "40px" }}>
+                <div style={{ display: "flex", alignItems: "center", marginTop: "15px", marginBottom: "15px" }}>
                   <hr class="line" />
                   <p class="text">1&nbsp;$AR+&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;$0.023525</p>
                   <hr class="line" />
+                </div>
+                <div className="walletList">
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/metamask.svg" alt="" /></a>
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/trustwallet.png" alt="" /></a>
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/coinbase.svg" alt="" /></a>
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/phantom.png" alt="" /></a>
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/mathwallet.png" alt="" /></a>
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/tokenpocket.png" alt="" /></a>
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/safepal.png" alt="" /></a>
                 </div>
                 {account.isConnected ? (
                   <>

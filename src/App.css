@@ -7085,3 +7085,16 @@ div#particles .slider-area.style-five:before {
   letter-spacing: 0.05em; /* Adjust to match tracking-wide */
   margin: 0 10px;
 }
+
+.walletList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+  margin-bottom: 40px;
+}
+
+.walletContent {
+  width: 40px;
+  height: 40px;
+}
