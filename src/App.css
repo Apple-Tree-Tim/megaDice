@@ -7124,3 +7124,33 @@ div#particles .slider-area.style-five:before {
   flex-wrap: wrap;
   justify-content: center; /* Center-aligns items when fewer members remain */
 }
+
+/* Partner.css */
+/* Partner.css */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  padding: 30px 120px;
+}
+
+.marquee {
+  display: flex;
+  animation: marquee 120s linear infinite;
+  gap: 60px;
+}
+
+.marquee img {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-800%);
+  }
+}

@@ -23,13 +23,13 @@ ChartJS.register(
   LineElement
 );
 
-const Tokenomics = () => {
+const Tokenomics = ({stage}) => {
   const data = {
     labels: ["Token in Circulation", "B&D Account", "Marketing Account", "Airdrop Account", "Stake Account","Project Team", "Burn Account"],
     datasets: [
       {
         backgroundColor: ["#6CE5E8", "#7ED957", "#FFDE59", "#FF914D", "#31356E", "#F9EF0F", "#D90F0F"],
-        data: [30, 5, 4, 4, 8, 6, 43],
+        data: [19.8, 1.4, 0.4, 0.4, 1.6, 0.4, 76],
       },
     ],
   };
@@ -50,7 +50,7 @@ const Tokenomics = () => {
           <div className="col-lg-9">
             <div className="dreamit-section-title  pb-20">
               <div className="dreamit-section-main-title">
-                <h1>1 AR+ = 1 MATIC</h1>
+                <h1>{ stage == 1? "1 AR+ = 1 MATIC" : (stage == 2 ? "1 AR+ = 1.5 MATIC" : "1 AR+ = 2 MATIC")}</h1>
               </div>
             </div>
           </div>
@@ -68,19 +68,19 @@ const Tokenomics = () => {
                 <div className="col-lg-6">
                   <div className="chart-menu">
                     <ul>
-                      <li className="another1"><span>30%</span>Token in Circulation</li>
-                      <li className="another3"><span>4%</span>Marketing Account</li>
-                      <li className="another5"><span>8%</span>Stake Account</li>
-                      <li className="another7"><span>43%</span>Burn Account</li>
+                      <li className="another1"><span>19.8%</span>Token in Circulation</li>
+                      <li className="another3"><span>0.4%</span>Marketing Account</li>
+                      <li className="another5"><span>1.6%</span>Stake Account</li>
+                      <li className="another7"><span>76%</span>Burn Account</li>
                     </ul>
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="chart-menu">
                     <ul>
-                      <li className="another2"><span>5%</span>B&D Account</li>
-                      <li className="another4"><span>4%</span>Airdrop Account</li>
-                      <li className="another6"><span>6%</span>Project Team</li>
+                      <li className="another2"><span>1.4%</span>B&D Account</li>
+                      <li className="another4"><span>0.4%</span>Airdrop Account</li>
+                      <li className="another6"><span>0.4%</span>Project Team</li>
                     </ul>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ const Tokenomics = () => {
           <div className="col-lg-6 col-md-12">
             <div className="table-reponsive box">
               <div className="table-responsive-content">
-                <h2>$AR+ has total supply of <span>420,000,000</span></h2>
+                <h2>$AR+ has total supply of <span>500,000,000,000</span></h2>
                 <p>The AR PLUS token serves as the utility token of our platform, enabling users to access premium content, participate in community governance, and redeem exclusive rewards and benefits.</p>
               </div>
               <table id="example" className="table table-striped table-bordered">

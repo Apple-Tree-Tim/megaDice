@@ -1,26 +1,25 @@
 import React, { useState, useEffect, useRef } from "react";
 import CustomConnectButton from "../common/connectwallet";
-import { useAccount } from 'wagmi';
+import { useAccount } from "wagmi";
 
-
-const Home = () => {
-  // State to track time left and progress bar width
+const Home = ({setStage, stage}) => {
+   // Track the current stage (1 or 2)
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
-    minutes: 10,
+    minutes: 1,
     seconds: 0,
   });
-
-  const [totalSeconds] = useState(600); // Total countdown seconds
-  const [progressWidth, setProgressWidth] = useState(100); // Progress bar width percentage
+  const [progressWidth, setProgressWidth] = useState(100);
   const [amountMatic, setAmountMatic] = useState();
   const [amountAR, setAmountAR] = useState();
 
   const account = useAccount();
-  const timerRef = useRef(null); // UseRef for tracking the timer ID
+  const timerRef = useRef(null);
+  const stageDurations = [60, 70]; // Stage durations in seconds
+  const stagePrices = [0.5, 0.75]; // Prices for each stage
+  const [totalSeconds, setTotalSeconds] = useState(stageDurations[0]); // Set initial duration
 
-  // Calculate and update time left every second
   useEffect(() => {
     timerRef.current = setInterval(() => {
       setTimeLeft((prevTime) => {
@@ -33,13 +32,24 @@ const Home = () => {
         const progress = (leftSeconds / totalSeconds) * 100;
         setProgressWidth(progress);
 
-        // Stop countdown when time reaches zero
         if (leftSeconds <= 0) {
           clearInterval(timerRef.current);
-          return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+          if (stage === 1) {
+            // Move to stage 2
+            setStage(2);
+            setTotalSeconds(stageDurations[1]);
+            setTimeLeft({
+              days: 0,
+              hours: 0,
+              minutes: Math.floor(stageDurations[1] / 60),
+              seconds: stageDurations[1] % 60,
+            });
+          } else {
+            setStage(3)
+            return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+          }
         }
 
-        // Calculate days, hours, minutes, and seconds
         const days = Math.floor(leftSeconds / (24 * 60 * 60));
         const hours = Math.floor((leftSeconds % (24 * 60 * 60)) / (60 * 60));
         const minutes = Math.floor((leftSeconds % (60 * 60)) / 60);
@@ -49,19 +59,19 @@ const Home = () => {
       });
     }, 1000);
 
-    return () => clearInterval(timerRef.current); // Cleanup on unmount
-  }, [totalSeconds]);
+    return () => clearInterval(timerRef.current);
+  }, [totalSeconds, stage]);
 
   const handleMaticChange = (e) => {
     const value = e.target.value;
     setAmountMatic(value);
-    setAmountAR(value * 2); // Assuming 1 Matic = 10 AR
+    setAmountAR(value / stagePrices[stage - 1]);
   };
 
   const handleARChange = (e) => {
     const value = e.target.value;
     setAmountAR(value);
-    setAmountMatic(value / 2); // Assuming 1 Matic = 10 AR
+    setAmountMatic(value * stagePrices[stage - 1]);
   };
 
   return (
@@ -93,7 +103,9 @@ const Home = () => {
                 <h2 className="wow fadeInUp" data-wow-delay=".2s">
                   <span style={{ color: "#37A3FE" }}>Buy $AR+ Token</span>
                 </h2>
-                <h2 className="wow fadeInUp" data-wow-delay=".2s">In Presale Now!</h2>
+                <h2 className="wow fadeInUp" data-wow-delay=".2s">
+                  {stage == 1 ? "First Presale Now!" : ( stage ==2 ? "Second Presale Now!" : "Presale Finished!")}
+                </h2>
                 <div className="countdown wow fadeInUp" data-wow-delay=".4s">
                   {["days", "hours", "minutes", "seconds"].map((unit, index) => (
                     <div className="countdown-item" key={index}>
@@ -115,20 +127,13 @@ const Home = () => {
                     style={{ width: `${progressWidth}%` }}
                   ></div>
                 </div>
-                <h5 className="wow fadeInUp" data-wow-delay=".1s" style={{ textAlign: 'center', textSizeAdjust: 'auto', marginTop: '20px' }}>TOTAL USD RAISED: $6,376,706.75</h5>
+                <h5 className="wow fadeInUp" data-wow-delay=".1s" style={{ textAlign: 'center', textSizeAdjust: 'auto', marginTop: '20px' }}>
+                  TOTAL USD RAISED: $6,376,706.75
+                </h5>
                 <div style={{ display: "flex", alignItems: "center", marginTop: "20px", marginBottom: "20px" }}>
-                  <hr class="line" />
-                  <p class="text">1&nbsp;$AR+&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;$0.023525</p>
-                  <hr class="line" />
-                </div>
-                <div className="walletList">
-                  <a href="#"><img className="walletContent" src="assets/images/wallets/metamask.svg" alt="" /></a>
-                  <a href="#"><img className="walletContent" src="assets/images/wallets/trustwallet.png" alt="" /></a>
-                  <a href="#"><img className="walletContent" src="assets/images/wallets/coinbase.svg" alt="" /></a>
-                  <a href="#"><img className="walletContent" src="assets/images/wallets/phantom.png" alt="" /></a>
-                  <a href="#"><img className="walletContent" src="assets/images/wallets/mathwallet.png" alt="" /></a>
-                  <a href="#"><img className="walletContent" src="assets/images/wallets/tokenpocket.png" alt="" /></a>
-                  <a href="#"><img className="walletContent" src="assets/images/wallets/safepal.png" alt="" /></a>
+                  <hr className="line" />
+                  <p className="text">{`1 $AR+ = ${stagePrices[stage - 1]} MATIC`}</p>
+                  <hr className="line" />
                 </div>
                 {account.isConnected ? (
                   <>
@@ -158,8 +163,8 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="about-btn mt-20 col-lg-12" style={{ textAlign: 'center' }}>
-                      <a href="#" style={{ width: '100%' }}>Buy Now</a>
+                    <div className="about-btn mt-20 col-lg-12" style={{ textAlign: "center" }}>
+                      <a href="#" style={{ width: "100%" }}>Buy Now</a>
                     </div>
                   </>
                 ) : (

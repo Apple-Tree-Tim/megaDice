@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import Navbar from "../components/common/navbar";
 import Home from "../components/views/home";
 import About from "../components/views/about";
@@ -17,16 +17,18 @@ import Purchaseway from "../components/views/purchaseway";
 import Tokenomics from "../components/views/tokenomics";
 
 function Landing() {
+  const [stage, setStage] = useState(1);
+
   return (
     <div>
       <Navbar />
-      <Home />
+      <Home setStage={setStage} stage={stage} />
       <About />
       <Partner />
       <Timeline />
       <Feature />
       <Purchaseway />
-      <Tokenomics />
+      <Tokenomics stage={stage} />
       <Team />
       <Roadmap />
       <Faqs />
