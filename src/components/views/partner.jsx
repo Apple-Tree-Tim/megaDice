@@ -17,6 +17,7 @@ const Partner = () => {
           <img src="assets/images/crypto/coinbase.svg" alt="Coinbase" />
           <img src="assets/images/crypto/bybit.svg" alt="Bybit" />
           <img src="assets/images/crypto/gate.svg" alt="Gate.io" />
+          <img src="assets/images/crypto/Kraken.svg" alt="Kraken" />
           <img src="assets/images/crypto/kucoin.svg" alt="KuCoin" />
           <img src="assets/images/crypto/mexc.svg" alt="MEXC" />
         </div>
