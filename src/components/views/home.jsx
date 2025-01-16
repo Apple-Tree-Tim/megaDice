@@ -10,9 +10,10 @@ const Home = ({setStage, stage}) => {
     minutes: 1,
     seconds: 0,
   });
-  const [progressWidth, setProgressWidth] = useState(100);
+
   const [amountMatic, setAmountMatic] = useState();
   const [amountAR, setAmountAR] = useState();
+  const progressWidth = 88;
 
   const account = useAccount();
   const timerRef = useRef(null);
@@ -28,9 +29,6 @@ const Home = ({setStage, stage}) => {
           prevTime.hours * 60 * 60 +
           prevTime.minutes * 60 +
           prevTime.seconds - 1;
-
-        const progress = (leftSeconds / totalSeconds) * 100;
-        setProgressWidth(progress);
 
         if (leftSeconds <= 0) {
           clearInterval(timerRef.current);
