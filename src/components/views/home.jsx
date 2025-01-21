@@ -103,12 +103,9 @@ const Home = () => {
               <div className="video-content">
                 <img className="hero-image" src="assets/images/main5.png" alt="Hero" />
               </div>
-              <h1 className="wow fadeInUp" data-wow-delay=".1s">
-                <span>AR+ </span> Token Presale
-              </h1>
-              <h4 className="wow fadeInUp" data-wow-delay=".3s" style={{ marginBottom: "10px" }}>
-                Take advantage of our <span>two-stage presale process</span>. Buy earlier to get a discount!
-              </h4>
+              <h2 className="wow fadeInUp" data-wow-delay=".3s" style={{ marginBottom: "10px" }}>
+                Buy earlier to get a discount! <br /> Take advantage of our <span>two-stage presale process</span>.
+              </h2>
               <div className="slider-button wow fadeInUp" data-wow-delay=".6s">
                 <a href="#">Download Whitepapers</a>
               </div>
@@ -128,7 +125,7 @@ const Home = () => {
                 <h5 className="wow fadeInUp" data-wow-delay=".1s" style={{ textAlign: 'center', textSizeAdjust: 'auto', marginTop: '20px' }}>
                   TOTAL USD RAISED: $6,376,706.75
                 </h5>
-                <hr style={{margin: "20px 0px"}} />
+                <hr style={{ margin: "20px 0px" }} />
                 {account.isConnected ? (
                   <>
                     <div className="row">
