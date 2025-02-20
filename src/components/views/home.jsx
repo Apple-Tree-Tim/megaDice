@@ -1,58 +1,64 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import CustomConnectButton from "../common/connectwallet";
 import { useAccount } from "wagmi";
+import useBuyToken from "../../hooks/useBuyToken";
+import useGetBalance from "../../hooks/useGetBalance";
 
 const Home = () => {
-  const [stage1TimeLeft, setStage1TimeLeft] = useState({
-    days: 30,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  // ✅ Use a fixed date format without "Z" to prevent timezone issues
+  const stage1EndDate = new Date("2025-03-01 00:00:00").getTime(); // Adjust date
+  const stage2EndDate = new Date("2025-04-01 00:00:00").getTime(); // Adjust date
 
-  const [stage2TimeLeft, setStage2TimeLeft] = useState({
-    days: 60,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const [stage1TimeLeft, setStage1TimeLeft] = useState({});
+  const [stage2TimeLeft, setStage2TimeLeft] = useState({});
 
   const [amountMatic, setAmountMatic] = useState("");
   const [amountAR, setAmountAR] = useState("");
-  const stagePrices = [1, 1.5]; // Prices for stages 1 and 2
+  const stagePrices = [1, 1.5];
+
   const account = useAccount();
-  const progressWidth = 88;
 
-  const updateTimeLeft = (timeLeft, setTimeLeft) => {
-    setTimeLeft((prevTime) => {
-      const leftSeconds =
-        prevTime.days * 24 * 60 * 60 +
-        prevTime.hours * 60 * 60 +
-        prevTime.minutes * 60 +
-        prevTime.seconds - 1;
+  const { buyToken, isBuying } = useBuyToken(amountMatic)
+  const PRESALE_SUPPLY = 5_000_000_000;
+  const { balance, getBalance } = useGetBalance("0x6794D2Ac1d6375bac41a03B7303146bF1E8EDbeb");
 
-      if (leftSeconds <= 0) {
-        return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-      }
+  const progressWidth = 100 - balance / PRESALE_SUPPLY * 100;
+  const totalUSD = ((PRESALE_SUPPLY - balance) * stagePrices[0] * 0.32).toFixed(2);
 
-      const days = Math.floor(leftSeconds / (24 * 60 * 60));
-      const hours = Math.floor((leftSeconds % (24 * 60 * 60)) / (60 * 60));
-      const minutes = Math.floor((leftSeconds % (60 * 60)) / 60);
-      const seconds = leftSeconds % 60;
+  const calculateTimeLeft = (endTime) => {
+    const now = new Date().getTime(); // ✅ Get current time
+    const timeLeft = endTime - now;
 
-      return { days, hours, minutes, seconds };
-    });
+    if (timeLeft <= 0) {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 }; // Prevent negative values
+    }
+
+    return {
+      days: Math.floor(timeLeft / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      minutes: Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60)),
+      seconds: Math.floor((timeLeft % (1000 * 60)) / 1000),
+    };
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      updateTimeLeft(stage1TimeLeft, setStage1TimeLeft);
-      updateTimeLeft(stage2TimeLeft, setStage2TimeLeft);
-    }, 1000);
+    const updateCountdown = () => {
+      setStage1TimeLeft(calculateTimeLeft(stage1EndDate));
+      setStage2TimeLeft(calculateTimeLeft(stage2EndDate));
+    };
 
-    return () => clearInterval(interval);
-  }, [stage1TimeLeft, stage2TimeLeft]);
+    updateCountdown(); // ✅ Run immediately
 
+    const interval = setInterval(updateCountdown, 1000); // ✅ Update every second
+
+    return () => clearInterval(interval); // ✅ Clean up interval
+  }, []);
+
+  useEffect(() => {
+    getBalance();
+    console.log(balance);
+    
+  })
   const handleMaticChange = (e) => {
     const value = e.target.value;
     setAmountMatic(value);
@@ -65,9 +71,20 @@ const Home = () => {
     setAmountMatic(value * stagePrices[0]); // Default to stage 1 price
   };
 
+  const handleBuyToken = async () => {
+    const success = await buyToken(amountMatic);
+    if (success) {
+      // Reset input fields after successful purchase
+      setAmountMatic("");
+      setAmountAR("");
+    }
+  };
+
   const renderCountdown = (timeLeft, stagePrice, stageLabel) => (
-    <div style={{ marginBottom: "25px" }}>
-      <h3 className="wow fadeInUp" style={{ color: "#37a3fe", marginBottom: "5px" }} data-wow-delay=".2s">{stageLabel}</h3>
+    <div className="mb-[25px]" style={{ marginBottom: "20px" }}>
+      <h3 className="wow fadeInUp" style={{ color: "#37a3fe", marginBottom: "5px" }} data-wow-delay=".2s">
+        {stageLabel}
+      </h3>
       <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
         <hr className="line" />
         <h4 className="wow fadeInUp" style={{ fontSize: "20px", margin: "0 10px" }} data-wow-delay=".2s">
@@ -83,8 +100,7 @@ const Home = () => {
               <div className={`countdown-${unit}`}>
                 <div className="countdown-label">{unit.charAt(0).toUpperCase() + unit.slice(1)}</div>
                 <div className="countdown-value">
-                  {Math.floor(timeLeft[unit] / 10)}
-                  {timeLeft[unit] % 10}
+                  {String(timeLeft[unit] || 0).padStart(2, "0")}
                 </div>
               </div>
             </div>
@@ -120,18 +136,14 @@ const Home = () => {
                 {renderCountdown(stage1TimeLeft, stagePrices[0], "First Stage Presale")}
                 {renderCountdown(stage2TimeLeft, stagePrices[1], "Second Stage Presale")}
                 <div className="progress-bar-container" style={{ marginTop: "20px" }}>
-                  <div
-                    className="progress-bar1"
-                    style={{ width: `${progressWidth}%` }}
-                  ></div>
+                  <div className="progress-bar1" style={{ width: `${progressWidth}%` }}></div>
                 </div>
-                <h5 className="wow fadeInUp" data-wow-delay=".1s" style={{ textAlign: 'center', textSizeAdjust: 'auto', marginTop: '20px' }}>
-                  TOTAL USD RAISED: $6,376,706.75
+                <h5 className="wow fadeInUp" data-wow-delay=".1s" style={{ textAlign: "center", textSizeAdjust: "auto", marginTop: "20px" }}>
+                  TOTAL USD RAISED: ${totalUSD}
                 </h5>
-                <hr style={{margin: "20px 0px"}} />
                 {account.isConnected ? (
                   <>
-                    <div className="row">
+                    <div className="row" style={{marginTop: "30px"}}>
                       <div className="col-lg-6">
                         <div className="form_box mb-2">
                           <input
@@ -157,8 +169,8 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="about-btn mt-20 col-lg-12" style={{ textAlign: "center" }}>
-                      <a href="#" style={{ width: "100%" }}>Buy Now</a>
+                    <div className="about-btn col-lg-12" style={{ textAlign: "center", marginTop: "0px" }}>
+                      <a href="#" style={{ width: "100%" }} onClick={handleBuyToken} disabled={isBuying}>{isBuying ? "Buying..." : "Buy Now"}</a>
                     </div>
                   </>
                 ) : (

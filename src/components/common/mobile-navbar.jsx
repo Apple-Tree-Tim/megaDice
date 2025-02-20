@@ -1,5 +1,3 @@
-import React from "react";
-
 const MobileNavbar = () => {
   return (
     <div className="mobile-menu-area d-sm-block d-md-block d-lg-none ">
