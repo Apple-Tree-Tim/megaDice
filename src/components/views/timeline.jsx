@@ -17,7 +17,7 @@ const Timeline = () => {
           <div className="col-lg-3 col-md-6">
             <div className="single-blog-box">
               <div className="blog-thumb">
-                <img src="assets/images/blog/blog2.jpg" alt="" />
+                <img src="assets/images/blog/blog1.png" alt="" />
                 <div className="blog-meta">
                   <div className="meta-content">
                     <h4>1</h4>
@@ -36,7 +36,7 @@ const Timeline = () => {
           <div className="col-lg-3 col-md-6">
             <div className="single-blog-box">
               <div className="blog-thumb">
-                <img src="assets/images/blog/coin2.jpg" alt="" />
+                <img src="assets/images/blog/blog2.png" alt="" />
                 <div className="blog-meta">
                   <div className="meta-content">
                     <h4>2</h4>
@@ -55,7 +55,7 @@ const Timeline = () => {
           <div className="col-lg-3 col-md-6">
             <div className="single-blog-box">
               <div className="blog-thumb">
-                <img src="assets/images/blog/blog4.jpg" alt="" />
+                <img src="assets/images/blog/blog3.png" alt="" />
                 <div className="blog-meta">
                   <div className="meta-content">
                     <h4>3</h4>
@@ -74,7 +74,7 @@ const Timeline = () => {
           <div className="col-lg-3 col-md-6">
             <div className="single-blog-box">
               <div className="blog-thumb">
-                <img src="assets/images/blog/blog3.jpg" alt="" />
+                <img src="assets/images/blog/blog4.png" alt="" />
                 <div className="blog-meta">
                   <div className="meta-content">
                     <h4>4</h4>

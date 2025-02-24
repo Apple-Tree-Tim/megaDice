@@ -1,5 +1,3 @@
-import React from "react";
-
 const About = () => {
   return (
     <div className="service-section style-three pt-50 pb-80">
@@ -19,53 +17,45 @@ const About = () => {
         <div className="row pt-40">
           <div className="col-lg-6 col-md-6">
             <div className="single-service-box d-flex">
-              <div className="service-thumb" style={{ width: "50%" }}>
-                <img src="assets/images/new/dola.webp" style={{ width: "100%" }} alt="" />
+              <div className="service-thumb" style={{ width: "600px" }}>
+                <img src="assets/images/new/dola.png" style={{ width: "100%" }} alt="" />
               </div>
               <div className="service-content" style={{ textAlign: "center", alignContent: "center" }}>
-                <h2>4000 +</h2>
-                <h3>Games from top providers</h3>
-                <h2>50 +</h2>
-                <h3>Sports and eSports</h3>
+                <h2>What is AR+ Token?</h2>
+                <h3>AR+ Token is the platform's virtual currency for all transactions.</h3>
               </div>
             </div>
           </div>
           <div className="col-lg-6 col-md-6">
-          <div className="single-service-box d-flex">
-              <div className="service-thumb" style={{ width: "50%" }}>
-                <img src="assets/images/new/dola2.webp" style={{ width: "100%" }} alt="" />
+            <div className="single-service-box d-flex">
+              <div className="service-thumb" style={{ width: "600px" }}>
+                <img src="assets/images/new/dola2.png" style={{ width: "100%" }} alt="" />
               </div>
               <div className="service-content" style={{ textAlign: "center", alignContent: "center" }}>
-                <h2>4000 +</h2>
-                <h3>Games from top providers</h3>
-                <h2>50 +</h2>
-                <h3>Sports and eSports</h3>
+                <h2>Use Cases</h2>
+                <h3>Use AR+ Tokens for events, games, purchases, and more.</h3>
               </div>
             </div>
           </div>
           <div className="col-lg-6 col-md-6">
-          <div className="single-service-box d-flex">
-              <div className="service-thumb" style={{ width: "50%" }}>
-                <img src="assets/images/new/dola3.webp" style={{ width: "100%" }} alt="" />
+            <div className="single-service-box d-flex">
+              <div className="service-thumb" style={{ width: "600px" }}>
+                <img src="assets/images/new/dola3.png" style={{ width: "100%" }} alt="" />
               </div>
               <div className="service-content" style={{ textAlign: "center", alignContent: "center" }}>
-                <h2>4000 +</h2>
-                <h3>Games from top providers</h3>
-                <h2>50 +</h2>
-                <h3>Sports and eSports</h3>
+                <h2>Earning AR+</h2>
+                <h3>Earn tokens through activities or buy them.</h3>
               </div>
             </div>
           </div>
           <div className="col-lg-6 col-md-6">
-          <div className="single-service-box d-flex">
-              <div className="service-thumb" style={{ width: "50%" }}>
-                <img src="assets/images/new/dola4.webp" style={{ width: "100%" }} alt="" />
+            <div className="single-service-box d-flex">
+              <div className="service-thumb" style={{ width: "600px" }}>
+                <img src="assets/images/new/dola4.png" style={{ width: "100%" }} alt="" />
               </div>
               <div className="service-content" style={{ textAlign: "center", alignContent: "center" }}>
-                <h2>4000 +</h2>
-                <h3>Games from top providers</h3>
-                <h2>50 +</h2>
-                <h3>Sports and eSports</h3>
+                <h2>Economic Value</h2>
+                <h3>Boost your virtual experience and create economic value.</h3>
               </div>
             </div>
           </div>

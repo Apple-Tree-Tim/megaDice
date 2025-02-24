@@ -1,6 +1,16 @@
 import React from "react";
 
 const Roadmap = () => {
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/whitepaper.pdf"; // Ensure the file is inside the 'public' folder
+    link.download = "whitepaper.pdf"; // The name for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="road-map pt-100 pb-100" id="roadmap">
       <div className="container">
@@ -21,14 +31,12 @@ const Roadmap = () => {
           <div className="col-lg-4 col-md-6">
             <div className="single-road-map-box mt-140">
               <div className="road-map-content">
-                <span>DEC 2021</span>
-                <h3>Website & White Papers</h3>
+                <h3>Platform and Ecosystem Development</h3>
                 <div className="road-map-list">
                   <ul>
-                    <li>Wallet Prppotype Realise</li>
-                    <li>Pre Sale ICO Starts</li>
-                    <li>Version 2 of Whitepapers</li>
-                    <li>Transfer ICO to Dolar</li>
+                    <li>Mobile app & website update (Apr – Jun 2025)</li>
+                    <li>Mapping & zoning (Jul 2025)</li>
+                    <li>VR/AR equipment & character sales (Oct 2025)</li>
                   </ul>
                 </div>
               </div>
@@ -37,13 +45,16 @@ const Roadmap = () => {
           <div className="col-lg-1"></div>
 
           <div className="col-lg-4 col-md-6">
-            <div className="single-road-map-box two">
+            <div className="single-road-map-box two" style={{"paddingRight": "35px"}}>
               <div className="road-map-content">
-                <span>JAN 2021</span>
-                <h3>Concept Development</h3>
-                <p>Conveniently grow state of the art super
-                  strategies with flexible methodologies is
-                  authoritatively supply.</p>
+                <h3>Token Launch & Listings</h3>
+                <div className="road-map-list">
+                  <ul>
+                    <li>Website development & community building (Jan – Feb 2025)</li>
+                    <li>First & second launch sales (Feb – Apr 2025)</li>
+                    <li>Exchange negotiations & listings (Apr – Dec 2025)</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -52,27 +63,32 @@ const Roadmap = () => {
         <div className="row pt-70">
           <div className="col-lg-1"></div>
           <div className="col-lg-4 col-md-6">
-            <div className="single-road-map-box three mt-140">
+            <div className="single-road-map-box three mt-140"  style={{"paddingRight": "35px"}}>
               <div className="road-map-content">
-                <span>FEB 2021</span>
-                <h3>Website & White Papers</h3>
-                <p>Conveniently grow state of the art super
-                  strategies with flexible methodologies is
-                  authoritatively supply.</p>
-
+                <h3>Business & Strategic Growth</h3>
+                <div className="road-map-list">
+                  <ul>
+                    <li>Company establishment voting (Aug – Sep 2025)</li>
+                    <li>Partnerships with VR/AR manufacturers & developers (Sep 2025)</li>
+                    <li>Continued exchange listings & business expansion (2025 – 2026)</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
           <div className="col-lg-1"></div>
 
           <div className="col-lg-4 col-md-6">
-            <div className="single-road-map-box two">
+            <div className="single-road-map-box two"  style={{"paddingRight": "35px"}}>
               <div className="road-map-content">
-                <span>MAR 2021</span>
-                <h3>Concept Development</h3>
-                <p>Conveniently grow state of the art super
-                  strategies with flexible methodologies is
-                  authoritatively supply.</p>
+                <h3>VR/AR Gaming & Events</h3>
+                <div className="road-map-list">
+                  <ul>
+                    <li>Treasure hunt game (Aug 2025)</li>
+                    <li>First digital concert (Oct 2025)</li>
+                    <li>VR/AR games development & launches (Oct 2025 – Mar 2026)</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -142,16 +158,16 @@ const Roadmap = () => {
               </div>
 
             </div>
-            <div className="road-icon-btn">
+            <div className="road-icon-btn" onClick={handleDownload}>
               <a href="#">Dounload <i className="flaticon-angle-arrow-down"></i></a>
             </div>
           </div>
           <div className="col-lg-6 col-md-12">
             <div className="road-thumb bounce-animate4">
               <img src="assets/images/map/book2.png" alt="" />
-                <div className="shape7 bounce-animate2">
-                  <img src="assets/images/map/shape.png" alt="" />
-                </div>
+              <div className="shape7 bounce-animate2">
+                <img src="assets/images/map/shape.png" alt="" />
+              </div>
             </div>
           </div>
         </div>

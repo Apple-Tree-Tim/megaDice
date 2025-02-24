@@ -57,7 +57,7 @@ const Home = () => {
   useEffect(() => {
     getBalance();
     console.log(balance);
-    
+
   })
   const handleMaticChange = (e) => {
     const value = e.target.value;
@@ -78,6 +78,15 @@ const Home = () => {
       setAmountMatic("");
       setAmountAR("");
     }
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/whitepaper.pdf"; // Ensure the file is inside the 'public' folder
+    link.download = "whitepaper.pdf"; // The name for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const renderCountdown = (timeLeft, stagePrice, stageLabel) => (
@@ -125,7 +134,7 @@ const Home = () => {
               <h4 className="wow fadeInUp" data-wow-delay=".3s" style={{ marginBottom: "10px" }}>
                 Take advantage of our <span>two-stage presale process</span>. Buy earlier to get a discount!
               </h4>
-              <div className="slider-button wow fadeInUp" data-wow-delay=".6s">
+              <div className="slider-button wow fadeInUp" data-wow-delay=".6s" onClick={handleDownload}>
                 <a href="#">Download Whitepapers</a>
               </div>
             </div>
@@ -138,12 +147,29 @@ const Home = () => {
                 <div className="progress-bar-container" style={{ marginTop: "20px" }}>
                   <div className="progress-bar1" style={{ width: `${progressWidth}%` }}></div>
                 </div>
-                <h5 className="wow fadeInUp" data-wow-delay=".1s" style={{ textAlign: "center", textSizeAdjust: "auto", marginTop: "20px" }}>
-                  TOTAL USD RAISED: ${totalUSD}
-                </h5>
+
+                <div style={{ display: "flex", alignItems: "center", marginTop: "20px", marginBottom: "30px", gap: "10px" }}>
+                  <hr className="line" />
+                  <h5 className="wow fadeInUp" data-wow-delay=".1s" style={{ textAlign: "center", textSizeAdjust: "auto", marginBottom: "0px", fontSize: "18px" }}>
+                    TOTAL USD RAISED: ${totalUSD}
+                  </h5>
+                  <hr className="line" />
+                </div>
+
+
+
+                <div className="walletList">
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/metamask.svg" alt="" /></a>
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/trustwallet.png" alt="" /></a>
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/coinbase.svg" alt="" /></a>
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/phantom.png" alt="" /></a>
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/mathwallet.png" alt="" /></a>
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/tokenpocket.png" alt="" /></a>
+                  <a href="#"><img className="walletContent" src="assets/images/wallets/safepal.png" alt="" /></a>
+                </div>
                 {account.isConnected ? (
                   <>
-                    <div className="row" style={{marginTop: "30px"}}>
+                    <div className="row" style={{ marginTop: "30px" }}>
                       <div className="col-lg-6">
                         <div className="form_box mb-2">
                           <input
