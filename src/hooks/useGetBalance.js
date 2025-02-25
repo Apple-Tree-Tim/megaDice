@@ -3,7 +3,7 @@ import { useReadContract } from "wagmi";
 import { ethers } from "ethers";
 import { config } from "../config";
 import presaleAbi from "../abi/preSale.json";
-const presaleAddress = "0xFA0f2d5DbA8942aB9128F1d4381ac6F5f4c11D12";
+const presaleAddress = "0xd97B7e33039dD99675d2f00102548FC7e0407Ab1";
 
 const useGetBalance = (address) => {
   const [balance, setBalance] = useState(0);
