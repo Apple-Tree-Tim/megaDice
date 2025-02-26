@@ -6,8 +6,8 @@ import useGetBalance from "../../hooks/useGetBalance";
 
 const Home = () => {
   // ✅ Use a fixed date format without "Z" to prevent timezone issues
-  const stage1EndDate = new Date("2025-03-01 00:00:00").getTime(); // Adjust date
-  const stage2EndDate = new Date("2025-04-01 00:00:00").getTime(); // Adjust date
+  const stage1EndDate = new Date("2025-04-01 00:00:00").getTime(); // Adjust date
+  const stage2EndDate = new Date("2025-05-01 00:00:00").getTime(); // Adjust date
 
   const [stage1TimeLeft, setStage1TimeLeft] = useState({});
   const [stage2TimeLeft, setStage2TimeLeft] = useState({});
