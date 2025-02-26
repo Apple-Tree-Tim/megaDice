@@ -62,12 +62,15 @@ const Home = () => {
     };
 
     updateCountdown();
-    getBalance(); // ✅ Run immediately
 
     const interval = setInterval(updateCountdown, 1000); // ✅ Update every second
 
     return () => clearInterval(interval); // ✅ Clean up interval
   }, []);
+
+  useEffect (() => {
+    getBalance();
+  }, [balance]);
 
   const handleMaticChange = (e) => {
     const value = e.target.value;
@@ -96,6 +99,7 @@ const Home = () => {
       setAmountMatic("");
       setAmountAR("");
     }
+    getBalance();
   };
 
   const handleDownload = () => {
