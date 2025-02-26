@@ -6,6 +6,7 @@ import useGetBalance from "../../hooks/useGetBalance";
 
 const Home = () => {
   // ✅ Use a fixed date format without "Z" to prevent timezone issues
+  let baldex = 1;
   const startDate = new Date("2025-03-01 00:00:00").getTime();
   const stage1EndDate = new Date("2025-04-01 00:00:00").getTime(); // Adjust date
   const stage2EndDate = new Date("2025-05-01 00:00:00").getTime(); // Adjust date
@@ -58,7 +59,6 @@ const Home = () => {
 
       setStage1TimeLeft(calculateTimeLeft(stage1EndDate));
       setStage2TimeLeft(calculateTimeLeft(stage2EndDate));
-      console.log(currentStage);
     };
 
     updateCountdown();
@@ -70,7 +70,7 @@ const Home = () => {
 
   useEffect (() => {
     getBalance();
-  }, [balance]);
+  });
 
   const handleMaticChange = (e) => {
     const value = e.target.value;
@@ -99,7 +99,7 @@ const Home = () => {
       setAmountMatic("");
       setAmountAR("");
     }
-    getBalance();
+    baldex++;
   };
 
   const handleDownload = () => {
