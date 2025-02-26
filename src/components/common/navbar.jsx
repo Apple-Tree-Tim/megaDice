@@ -13,7 +13,7 @@ const Navbar = () => {
           </div>
           <div className="col-lg-9">
             <nav className="cryptozen_menu">
-              <div className="header-menu" style={{ display: "flex", alignItems: "center" }}>
+              <div className="header-menu" style={{ display: "flex", alignItems: "center", gap: "40px" }}>
                 <ul className="nav_scroll">
                   <li><a href="#home">Home</a>
                   </li>
@@ -24,10 +24,7 @@ const Navbar = () => {
                   <li><a href="#faqs">FaQs</a>
                   </li>
                 </ul>
-                <div className="sidebar" style={{ display: "flex", alignItems: "center" }}>
-                  <CustomConnectButton />
-                  <div className="nav-btn navSidebar-button" style={{ marginLeft: "20px"}}><span className="icon flaticon-menu-2"></span></div>
-                </div>
+                <CustomConnectButton />
               </div>
             </nav>
           </div>
