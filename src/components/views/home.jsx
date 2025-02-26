@@ -62,13 +62,21 @@ const Home = () => {
   const handleMaticChange = (e) => {
     const value = e.target.value;
     setAmountMatic(value);
-    setAmountAR(value / stagePrices[0]); // Default to stage 1 price
+    if (stage1TimeLeft != 0) {
+      setAmountAR(value / stagePrices[0]);
+    } else {
+      setAmountAR(value / stagePrices[1]);
+    }
   };
 
   const handleARChange = (e) => {
     const value = e.target.value;
     setAmountAR(value);
-    setAmountMatic(value * stagePrices[0]); // Default to stage 1 price
+    if (stage1TimeLeft != 0) {
+      setAmountMatic(value * stagePrices[0]);
+    } else {
+      setAmountMatic(value * stagePrices[1]);
+    }
   };
 
   const handleBuyToken = async () => {
@@ -155,8 +163,6 @@ const Home = () => {
                   </h5>
                   <hr className="line" />
                 </div>
-
-
 
                 <div className="walletList">
                   <a href="#"><img className="walletContent" src="assets/images/wallets/metamask.svg" alt="" /></a>
