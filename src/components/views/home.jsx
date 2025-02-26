@@ -6,12 +6,13 @@ import useGetBalance from "../../hooks/useGetBalance";
 
 const Home = () => {
   // ✅ Use a fixed date format without "Z" to prevent timezone issues
+  const startDate = new Date("2025-03-01 00:00:00").getTime();
   const stage1EndDate = new Date("2025-04-01 00:00:00").getTime(); // Adjust date
   const stage2EndDate = new Date("2025-05-01 00:00:00").getTime(); // Adjust date
 
   const [stage1TimeLeft, setStage1TimeLeft] = useState({});
   const [stage2TimeLeft, setStage2TimeLeft] = useState({});
-
+  const [currentStage, setCurrentStage] = useState(0);
   const [amountMatic, setAmountMatic] = useState("");
   const [amountAR, setAmountAR] = useState("");
   const stagePrices = [1, 1.5];
@@ -43,22 +44,31 @@ const Home = () => {
 
   useEffect(() => {
     const updateCountdown = () => {
+      const now = new Date().getTime();
+
+      if (now < startDate) {
+        setCurrentStage(0);
+      } else if (now >= startDate && now < stage1EndDate) {
+        setCurrentStage(1);
+      } else if (now >= stage1EndDate && now < stage2EndDate) {
+        setCurrentStage(2);
+      } else {
+        setCurrentStage(3);
+      }
+
       setStage1TimeLeft(calculateTimeLeft(stage1EndDate));
       setStage2TimeLeft(calculateTimeLeft(stage2EndDate));
+      console.log(currentStage);
     };
 
-    updateCountdown(); // ✅ Run immediately
+    updateCountdown();
+    getBalance(); // ✅ Run immediately
 
     const interval = setInterval(updateCountdown, 1000); // ✅ Update every second
 
     return () => clearInterval(interval); // ✅ Clean up interval
   }, []);
 
-  useEffect(() => {
-    getBalance();
-    console.log(balance);
-
-  })
   const handleMaticChange = (e) => {
     const value = e.target.value;
     setAmountMatic(value);
@@ -173,7 +183,15 @@ const Home = () => {
                   <a href="#"><img className="walletContent" src="assets/images/wallets/tokenpocket.png" alt="" /></a>
                   <a href="#"><img className="walletContent" src="assets/images/wallets/safepal.png" alt="" /></a>
                 </div>
-                {account.isConnected ? (
+                {currentStage === 0 ? (
+                  <div className="about-btn col-lg-12" style={{ textAlign: "center", marginTop: "20px" }}>
+                    <a href="#" style={{ width: "100%" }}>Presale will start on March 1st</a>
+                  </div>
+                ) : currentStage === 3 ? (
+                  <div className="about-btn col-lg-12" style={{ textAlign: "center", marginTop: "20px" }}>
+                    <a href="#" style={{ width: "100%" }}>Presale Ended</a>
+                  </div>
+                ) : account.isConnected ? (
                   <>
                     <div className="row" style={{ marginTop: "30px" }}>
                       <div className="col-lg-6">
@@ -216,7 +234,7 @@ const Home = () => {
       <div className="shape">
         <img src="assets/images/hero/shape.png" alt="Shape" />
       </div>
-    </div>
+    </div >
   );
 };
 
