@@ -25,7 +25,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-section style-four pt-110 pb-100">
+    <div className="contact-section style-four pt-110 pb-100" id="contact">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

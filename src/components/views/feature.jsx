@@ -3,7 +3,7 @@ import React from "react";
 const Feature = () => {
 
   return (
-    <div className="service-section style-four pt-95 pb-80">
+    <div className="service-section style-four pt-95 pb-80" id="feature">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

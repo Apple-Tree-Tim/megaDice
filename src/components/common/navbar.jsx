@@ -17,7 +17,7 @@ const Navbar = () => {
                 <ul className="nav_scroll">
                   <li><a href="#home">Home</a>
                   </li>
-                  <li><a href="#about">How to buy</a>
+                  <li><a href="#purchaseway">How to buy</a>
                   </li>
                   <li><a href="#roadmap">road map</a>
                   </li>

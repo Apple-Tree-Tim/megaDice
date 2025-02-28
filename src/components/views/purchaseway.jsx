@@ -2,7 +2,7 @@ import React from "react";
 
 const Purchaseway = () => {
   return (
-    <div className="about-section style-three pt-100 pb-50" id="about">
+    <div className="about-section style-three pt-100 pb-50" id="purchaseway">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

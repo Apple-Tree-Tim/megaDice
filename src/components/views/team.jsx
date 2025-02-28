@@ -61,7 +61,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <section className="team-section pt-80 pb-80">
+    <section className="team-section pt-80 pb-80" id="team">
       <div className="container">
         <div className="row" style={{marginBottom: "30px"}}>
           <div className="col-lg-12">

@@ -23,7 +23,7 @@ ChartJS.register(
   LineElement
 );
 
-const Tokenomics = ({stage}) => {
+const Tokenomics = () => {
   const data = {
     labels: ["Token in Circulation", "B&D Account", "Marketing Account", "Airdrop Account", "Stake Account","Project Team", "Burn Account"],
     datasets: [
@@ -44,13 +44,13 @@ const Tokenomics = ({stage}) => {
     },
   };
   return (
-    <div className="graph-section style-three pb-100">
+    <div className="graph-section style-three pb-100" id="token">
       <div className="container">
         <div className="row upper14">
           <div className="col-lg-9">
             <div className="dreamit-section-title  pb-20">
               <div className="dreamit-section-main-title">
-                <h1>{ stage == 1? "1 AR+ = 1 MATIC" : (stage == 2 ? "1 AR+ = 1.5 MATIC" : "1 AR+ = 2 MATIC")}</h1>
+                <h1>1 AR+ = 1 MATIC</h1>
               </div>
             </div>
           </div>

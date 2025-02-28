@@ -1,4 +1,14 @@
 const Footer = () => {
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/whitepaper.pdf"; // Ensure the file is inside the 'public' folder
+    link.download = "whitepaper.pdf"; // The name for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="footer pt-100">
       <div className="container">
@@ -9,28 +19,7 @@ const Footer = () => {
                 <img src="assets/images/one.png" style={{ width: "60%" }} alt="Footer-logo" />
               </div>
               <div className="footer-content">
-                <p>There are many variations of pass of Lorem Ipsum available, but the majority have suffered</p>
-              </div>
-            </div>
-            <div className="footer-social-box">
-              <div className="social-content">
-                <h3>Follow Us</h3>
-              </div>
-              <div className="footer-about-social-icon pt-20">
-                <ul>
-                  <li>
-                    <a href="#"><i className="fab fa-facebook-f"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i className="fab fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i className="fab fa-pinterest"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                  </li>
-                </ul>
+                <p>AR+ Token is the platform's virtual currency for all transactions.</p>
               </div>
             </div>
           </div>
@@ -42,10 +31,10 @@ const Footer = () => {
                 </div>
                 <div className="footer-quick-link-list">
                   <ul>
-                    <li><a href="#">What Is ICO</a></li>
-                    <li><a href="#">Token</a></li>
-                    <li><a href="#">Road Map</a></li>
-                    <li><a href="#">Advisor</a></li>
+                    <li><a href="#about">What Is AR+</a></li>
+                    <li><a href="#token">Token</a></li>
+                    <li><a href="#roadmap">Road Map</a></li>
+                    <li><a href="#purchaseway">How to buy</a></li>
                   </ul>
                 </div>
               </div>
@@ -59,10 +48,10 @@ const Footer = () => {
                 </div>
                 <div className="footer-quick-link-list">
                   <ul>
-                    <li><a href="#">ICO Apps</a></li>
-                    <li><a href="#">White Papers</a></li>
-                    <li><a href="#">Teams</a></li>
-                    <li><a href="#">Join Us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#" onClick={handleDownload}>White Papers</a></li>
+                    <li><a href="#team">Teams</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                   </ul>
                 </div>
               </div>

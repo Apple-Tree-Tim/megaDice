@@ -2,7 +2,7 @@ import React from "react";
 
 const Timeline = () => {
   return (
-    <div className="blog-section pt-95 pb-70">
+    <div className="blog-section pt-95 pb-70" id="timeline">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

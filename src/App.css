@@ -440,6 +440,46 @@ html {
   color: #0194FC;
 }
 
+.slider-button-telegram {
+  display: inline-block;
+  margin-right: 28px;
+}
+
+.slider-button-telegram a {
+  display: inline-block;
+  background: #0194FC;
+  padding: 17px 17px;
+  border-radius: 30px;
+  font-size: 15px;
+  transition: .5s;
+  font-family: 'Inter';
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.slider-button-telegram a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  background: #fff;
+  transition: .6s;
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.slider-button-telegram a:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.slider-button-telegram a:hover {
+  color: #0194FC;
+}
+
 .slider-btn {
   display: inline-block;
 }
