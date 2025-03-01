@@ -9,9 +9,16 @@
     width: 106%;
     height: 114%;
 }
+.slider-area {
+    height: 949px;
+}
+  
 }
 /* Normal desktop :1200px. */
 @media (min-width: 1500px) and (max-width: 1600px) {
+    .slider-area {
+        height: 949px;
+    }
 	.shape6 {
     left: 49%;
 	}
@@ -31,6 +38,9 @@
 }
 /* Normal desktop :992px. */
 @media (min-width: 1365px) and (max-width: 1400px) {
+    .slider-area {
+        height: 949px;
+    }
 	.shape6 {
     left: 48%;
 	}
@@ -49,6 +59,9 @@
 }
 /* Normal desktop :992px. */
 @media (min-width: 1169px) and (max-width: 1364px) {
+    .slider-area {
+        height: 949px;
+    }
 	.cryptozen_menu ul li a {
         padding: 35px 4px;
     }
@@ -243,6 +256,9 @@ ul.tabs li {
 }
 /* Large Mobile 1168px. */
 @media only screen and (min-width: 992px) and (max-width: 1168px) {
+    .slider-area {
+        height: auto;
+    }
 .cryptozen_menu ul li a {
     padding: 35px 5px;
 }
@@ -441,6 +457,9 @@ button.subscribe-button {
 }
 /* Smart mobile */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .slider-area {
+        height: auto;
+    }
  #countdown {
     left: -50px;
 }
@@ -750,6 +769,9 @@ button.subscribe-button {
 
 /* Smart mobile */
 @media only screen and (min-width: 600px) and (max-width:767px) {
+    .slider-area {
+        height: auto;
+    }
  .header-area {
     display: none;
 }
@@ -996,6 +1018,9 @@ div#example_filter {
 
 }
 @media only screen and (min-width:481px) and (max-width: 599px) {
+    .slider-area {
+        height: auto;
+    }
 .about-section .shape1 {
     right: 65px;
 }
@@ -1291,9 +1316,10 @@ div#example_filter label {
 
 }
 
-
-
 @media only screen and (min-width: 320px) and (max-width: 480px) {
+    .slider-area {
+        height: auto;
+    }
 .header-area {
      margin-bottom: 0; 
     display: none;
@@ -1610,6 +1636,10 @@ canvas#yourChart {
 .single-feature-box {
     margin-bottom: 30px;
 }
+.slider-area {
+    height: auto;
+}
+
 .slider-area.style-five .slider-content h1 {
     font-size: 34px;
 }
@@ -1623,7 +1653,7 @@ canvas#yourChart {
     left: 0%;
 }
 .countdown-area {
-    display: none;
+    display: block;
 }
 .hero-shape.rotatemeTwo {
     display: none;

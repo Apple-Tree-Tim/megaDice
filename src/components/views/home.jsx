@@ -97,7 +97,6 @@ const Home = () => {
       setAmountMatic("");
       setAmountAR("");
     }
-    baldex++;
   };
 
   const handleDownload = () => {

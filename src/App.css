@@ -373,7 +373,6 @@ html {
   ===================================*/
 .slider-area {
   background: url(images/hero/bg.png);
-  height: 949px;
   position: relative;
   z-index: 1;
 }
@@ -1032,6 +1031,7 @@ span.other {
   border-radius: 7px;
   top: 86%;
   left: -112px;
+  height: auto;
 }
 
 .coundown-content {
