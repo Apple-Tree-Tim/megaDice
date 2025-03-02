@@ -13,6 +13,7 @@ import {
 } from "@tanstack/react-query";
 import { config } from './config';
 
+import './assets/responsive.css';
 
 function App() {
   const queryClient = new QueryClient();
