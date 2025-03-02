@@ -168,7 +168,7 @@ const Home = () => {
               <div className="countdown-content text-center">
                 {renderCountdown(stage1TimeLeft, stagePrices[0], "First Stage Presale")}
                 {renderCountdown(stage2TimeLeft, stagePrices[1], "Second Stage Presale")}
-                <div className="progress-bar-container" style={{ marginTop: "20px" }}>
+                {/* <div className="progress-bar-container" style={{ marginTop: "20px" }}>
                   <div className="progress-bar1" style={{ width: `${progressWidth}%` }}></div>
                 </div>
 
@@ -178,7 +178,7 @@ const Home = () => {
                     TOTAL USD RAISED: ${totalUSD}
                   </h5>
                   <hr className="line" />
-                </div>
+                </div> */}
 
                 <div className="walletList">
                   <a href="#"><img className="walletContent" src="assets/images/wallets/metamask.svg" alt="" /></a>
